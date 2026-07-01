@@ -45,16 +45,16 @@ function cleanWpBody(html) {
   body = body.replace(/<\/strong><\/span>/gi, '</strong>');
 
   const linkRewrites = [
-    [/https?:\/\/sciengtech\.in\/contact-us\/?/gi, '../../company/contact.html'],
-    [/https?:\/\/sciengtech\.in\/knowledge-center\/?/gi, 'index.html'],
-    [/https?:\/\/sciengtech\.in\/engineering\/rfq\/?/gi, '../rfq.html'],
-    [/https?:\/\/sciengtech\.in\/optics\/?/gi, '../../components/optics.html'],
-    [/https?:\/\/sciengtech\.in\/lasers\/?/gi, '../../components/lasers.html'],
+    [/https?:\/\/sciengtech\.in\/contact-us\/?/gi, '/company/contact.html'],
+    [/https?:\/\/sciengtech\.in\/knowledge-center\/?/gi, '/engineering/knowledge/index.html'],
+    [/https?:\/\/sciengtech\.in\/engineering\/rfq\/?/gi, '/engineering/rfq.html'],
+    [/https?:\/\/sciengtech\.in\/optics\/?/gi, '/components/optics.html'],
+    [/https?:\/\/sciengtech\.in\/lasers\/?/gi, '/components/lasers.html'],
     [/https?:\/\/sciengtech\.in\/([^/"'\s]+)\/?/gi, (m, slug) => {
       if (['category', 'wp-content', 'wp-json', 'product', 'our-oem-products'].some((p) => slug.startsWith(p))) {
         return m;
       }
-      return `${slug}.html`;
+      return `/engineering/knowledge/${slug}.html`;
     }],
   ];
   for (const [pattern, replacement] of linkRewrites) {

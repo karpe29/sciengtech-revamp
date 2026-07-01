@@ -1,7 +1,9 @@
 <header class="site-header">
   <div class="wrap nav-bar">
-    <a class="logo" href="{{BASE}}index.html">SciEngTech <span>Solutions</span></a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <a class="logo" href="{{BASE}}index.html">
+      <img src="{{BASE}}assets/sciengtech-logo.png" alt="SciEngTech Solutions" width="240" height="80" />
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <div class="nav-item has-mega">
         <button class="nav-trigger" type="button">Solutions <span class="chev">▾</span></button>
         <div class="mega-panel" role="region" aria-label="Solutions menu">
@@ -29,8 +31,8 @@
               </div>
               <div>
                 <div class="mega-col-title">Training Kits</div>
-                <a class="mega-link" href="{{BASE}}solutions/fourier-optics-kit.html">Fourier Optics Kit<small>Educational optics</small></a>
-                <a class="mega-link" href="{{BASE}}solutions/polarized-3d-cinema.html">Polarized 3D Cinema<small>Demonstration kit</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/fourier-optics-kit.html">Fourier Optics Kit<small>Imaging Grids, FT, IFT</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/polarized-3d-cinema.html">Polarization Optics Kit<small>Polarizers, HWP, QWP</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/training-kits.html" style="color:var(--accent);margin-top:8px;display:inline-block">View all training kits →</a>
               </div>
             </div>
@@ -102,6 +104,10 @@
         <span>Search…</span>
         <kbd>Ctrl K</kbd>
       </button>
+      <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span class="nav-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" hidden></div>
 </header>

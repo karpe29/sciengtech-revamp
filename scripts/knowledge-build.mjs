@@ -49,11 +49,26 @@ function articleImage(article) {
   return extractImage(article.body) || FALLBACK_IMAGES[article.id] || 'assets/slides/03-dielectric-mirror.svg';
 }
 
-function bentoStackedCard(article, assetBase, tone = 'panel') {
+function articleHref(base, id) {
+  return `${base}engineering/knowledge/${id}.html`;
+}
+
+function knowledgeHubHref(base) {
+  return `${base}engineering/knowledge/index.html`;
+}
+
+function fixBodyLinks(body, base) {
+  return String(body ?? '').replace(
+    /href="(?!https?:|\/|\.{1,2}\/)([a-z0-9-]+)\.html"/gi,
+    (_, slug) => `href="${articleHref(base, slug)}"`
+  );
+}
+
+function bentoStackedCard(article, assetBase, pageBase, tone = 'panel') {
   const img = articleImage(article);
   const src = img.startsWith('http') ? img : `${assetBase}${img}`;
   return `<article class="bento-card bento-card--stacked bento-tone-${tone}" data-category="${esc(article.category)}">
-    <a class="bento-card-link" href="${esc(article.id)}.html">
+    <a class="bento-card-link" href="${esc(articleHref(pageBase, article.id))}">
       <div class="bento-card-media" aria-hidden="true">
         <img src="${esc(src)}" alt="" loading="lazy" />
       </div>
@@ -67,9 +82,9 @@ function bentoStackedCard(article, assetBase, tone = 'panel') {
   </article>`;
 }
 
-function bentoCompactCard(article, assetBase, tone = 'panel') {
+function bentoCompactCard(article, pageBase, tone = 'panel') {
   return `<article class="bento-card bento-card--compact bento-tone-${tone}" data-category="${esc(article.category)}">
-    <a class="bento-card-link" href="${esc(article.id)}.html">
+    <a class="bento-card-link" href="${esc(articleHref(pageBase, article.id))}">
       <div class="bento-card-body">
         <span class="bento-card-meta">${esc(article.categoryLabel)}</span>
         <h2>${esc(article.title)}</h2>
@@ -80,11 +95,11 @@ function bentoCompactCard(article, assetBase, tone = 'panel') {
   </article>`;
 }
 
-function bentoSplitCard(article, assetBase, tone = 'muted') {
+function bentoSplitCard(article, assetBase, pageBase, tone = 'muted') {
   const img = articleImage(article);
   const src = img.startsWith('http') ? img : `${assetBase}${img}`;
   return `<article class="bento-card bento-card--split bento-tone-${tone}" data-category="${esc(article.category)}">
-    <a class="bento-card-link" href="${esc(article.id)}.html">
+    <a class="bento-card-link" href="${esc(articleHref(pageBase, article.id))}">
       <div class="bento-card-body">
         <span class="bento-card-meta">${esc(article.categoryLabel)} · ${esc(formatDate(article.published))}</span>
         <h2>${esc(article.title)}</h2>
@@ -98,9 +113,9 @@ function bentoSplitCard(article, assetBase, tone = 'muted') {
   </article>`;
 }
 
-function bentoCtaCard(assetBase) {
+function bentoCtaCard(assetBase, pageBase) {
   return `<article class="bento-card bento-card--cta bento-card--split bento-tone-ruby">
-    <a class="bento-card-link" href="${assetBase}components/optics.html">
+    <a class="bento-card-link" href="${pageBase}components/optics.html">
       <div class="bento-card-body">
         <span class="bento-card-meta">Components</span>
         <h2>Optics Catalog</h2>
@@ -133,18 +148,16 @@ function slotVariant(span) {
   return 'split';
 }
 
-function renderCard(variant, article, assetBase) {
+function renderCard(variant, article, assetBase, pageBase) {
   switch (variant) {
-    case 'featured':
-      return bentoFeaturedCard(article, assetBase);
     case 'stacked':
-      return bentoStackedCard(article, assetBase, 'panel');
+      return bentoStackedCard(article, assetBase, pageBase, 'panel');
     case 'compact':
-      return bentoCompactCard(article, assetBase, 'deep');
+      return bentoCompactCard(article, pageBase, 'deep');
     case 'split':
-      return bentoSplitCard(article, assetBase, 'muted');
+      return bentoSplitCard(article, assetBase, pageBase, 'muted');
     default:
-      return bentoCompactCard(article, assetBase, 'panel');
+      return bentoCompactCard(article, pageBase, 'panel');
   }
 }
 
@@ -158,11 +171,11 @@ function featuredImage(article, articles, assetBase) {
   return FALLBACK_IMAGES[article.id] || 'assets/slides/03-dielectric-mirror.svg';
 }
 
-function bentoFeaturedCardWithFallback(article, articles, assetBase) {
+function bentoFeaturedCardWithFallback(article, articles, assetBase, pageBase) {
   const img = featuredImage(article, articles, assetBase);
   const src = img.startsWith('http') ? img : `${assetBase}${img}`;
   return `<article class="bento-card bento-card--featured" data-category="${esc(article.category)}">
-    <a class="bento-card-link" href="${esc(article.id)}.html">
+    <a class="bento-card-link" href="${esc(articleHref(pageBase, article.id))}">
       <div class="bento-card-media" aria-hidden="true">
         <img src="${esc(src)}" alt="" loading="lazy" />
         <div class="bento-card-media-overlay"></div>
@@ -177,22 +190,22 @@ function bentoFeaturedCardWithFallback(article, articles, assetBase) {
   </article>`;
 }
 
-function renderSlotCard(span, article, articles, assetBase) {
+function renderSlotCard(span, article, articles, assetBase, pageBase) {
   const variant = slotVariant(span);
-  if (variant === 'featured') return bentoFeaturedCardWithFallback(article, articles, assetBase);
-  return renderCard(variant, article, assetBase);
+  if (variant === 'featured') return bentoFeaturedCardWithFallback(article, articles, assetBase, pageBase);
+  return renderCard(variant, article, assetBase, pageBase);
 }
 
-function buildBentoGrid(articles, assetBase) {
+function buildBentoGrid(articles, assetBase, pageBase) {
   if (!articles.length) return '<p class="catalog-meta">No articles yet.</p>';
 
   const cards = articles.map((article, i) => {
     const span = spanForIndex(i);
-    return addSpan(renderSlotCard(span, article, articles, assetBase), span);
+    return addSpan(renderSlotCard(span, article, articles, assetBase, pageBase), span);
   });
 
   const ctaSpan = spanForIndex(articles.length);
-  cards.push(addSpan(bentoCtaCard(assetBase), ctaSpan));
+  cards.push(addSpan(bentoCtaCard(assetBase, pageBase), ctaSpan));
 
   return cards.join('\n');
 }
@@ -206,7 +219,7 @@ export function buildKnowledgePages({ shell, write }) {
 
   const knowledge = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   const articles = knowledge.articles || [];
-  const base = '../';
+  const base = '../../';
   const assetBase = '../../';
 
   const hubMain = `<section class="knowledge-hub">
@@ -219,7 +232,7 @@ export function buildKnowledgePages({ shell, write }) {
         <p class="lead">Application notes, optical guides, and technical references for quantum and photonics labs.</p>
       </header>
       <div class="knowledge-bento" id="knowledgeGrid">
-        ${buildBentoGrid(articles, assetBase)}
+        ${buildBentoGrid(articles, assetBase, base)}
       </div>
     </div>
   </section>`;
@@ -243,16 +256,16 @@ export function buildKnowledgePages({ shell, write }) {
     const main = `<section class="page-content knowledge-article">
       <div class="wrap">
         <nav class="product-breadcrumb">
-          <a href="${base}index.html">Home</a> / <a href="index.html">Knowledge Center</a> / <span>${esc(article.title)}</span>
+          <a href="${base}index.html">Home</a> / <a href="${knowledgeHubHref(base)}">Knowledge Center</a> / <span>${esc(article.title)}</span>
         </nav>
         <header class="knowledge-article-header">
           <p class="knowledge-article-meta">${esc(article.categoryLabel)} · ${esc(formatDate(article.published))}</p>
           <h1>${esc(article.title)}</h1>
           ${tagHtml ? `<div class="knowledge-tags">${tagHtml}</div>` : ''}
         </header>
-        <div class="knowledge-prose">${article.body}</div>
+        <div class="knowledge-prose">${fixBodyLinks(article.body, base)}</div>
         <footer class="knowledge-article-footer">
-          <p>Questions about specifications or custom configurations? <a href="../rfq.html">Request a technical quote</a> or <a href="../../company/contact.html">contact engineering</a>.</p>
+          <p>Questions about specifications or custom configurations? <a href="${base}engineering/rfq.html">Request a technical quote</a> or <a href="${base}company/contact.html">contact engineering</a>.</p>
         </footer>
       </div>
     </section>`;
@@ -270,5 +283,17 @@ export function buildKnowledgePages({ shell, write }) {
   }
 
   console.log(`  knowledge: ${articles.length} articles`);
+
+  for (const article of articles) {
+    write(
+      `${article.id}.html`,
+      `<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta http-equiv="refresh" content="0;url=engineering/knowledge/${article.id}.html" /><title>Redirect</title></head><body><p><a href="engineering/knowledge/${article.id}.html">${article.title}</a></p></body></html>`
+    );
+  }
+  write(
+    'knowledge-center.html',
+    `<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta http-equiv="refresh" content="0;url=engineering/knowledge/index.html" /><title>Redirect</title></head><body><p><a href="engineering/knowledge/index.html">Knowledge Center</a></p></body></html>`
+  );
+
   return knowledge;
 }

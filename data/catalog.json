@@ -482,61 +482,6 @@
       "categoryLabel": "Quantum Set-Ups"
     },
     {
-      "id": "polarized-3d-cinema",
-      "sku": "SET-Polarized3DCinema-EDU",
-      "name": "SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit",
-      "type": "solution",
-      "pageTemplate": "solution",
-      "aliases": [],
-      "overview": [],
-      "features": [],
-      "applications": [],
-      "techSpecs": [],
-      "keyValueSpecs": [],
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": null,
-      "solutionContent": {
-        "tagline": null,
-        "demonstrates": [
-          "Learn how to Generate and Measure Linear and Circular Polarizations of Light",
-          "Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology",
-          "Additional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization",
-          "Measure the Rotation of the Polarization Angle of Light Passing through Optically Active Media"
-        ],
-        "kitIncludes": [
-          "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials",
-          "Choose from Educational Kits Containing Imperial or Metric Components",
-          "Includes Extensive Manual for Easy Assembly and Use",
-          "Kits Containing Metric Components"
-        ],
-        "capabilities": [
-          "Compact Design",
-          "Made in INDIA"
-        ]
-      },
-      "customNote": null,
-      "summary": "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials",
-      "specHighlight": "Learn how to Generate and Measure Linear and Circular Polarizations of Light",
-      "specs": [
-        {
-          "label": "Procurement",
-          "value": "Request Technical Quote"
-        }
-      ],
-      "body": "SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit\n\nComplete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials \n\nChoose from Educational Kits Containing Imperial or Metric Components \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nCreate a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology \n\nAdditional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization \n\nMeasure the Rotation of the Polarization Angle of Light Passing through Optically Active Media \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Polarized3DCinema-EDU",
-      "image": "assets/products/polarized-3d-cinema/primary.png",
-      "tags": [
-        "polarized 3d cinema",
-        "training kit"
-      ],
-      "writeupPath": "Training Kit/3D Cinema/3D Cinema.docx",
-      "_search": "polarized-3d-cinema set-polarized3dcinema-edu sciengtech ‘polarization and ‘polarized 3d cinema’ educational kit solution training-kits training kits complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials learn how to generate and measure linear and circular polarizations of light  polarized 3d cinema training kit sciengtech ‘polarization and ‘polarized 3d cinema’ educational kit\n\ncomplete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials \n\nchoose from educational kits containing imperial or metric components \n\nlearn how to generate and measure linear and circular polarizations of light \n\nlearn how to generate and measure linear and circular polarizations of light \n\ncreate a 3d projection using circularly polarized light based on reald™ cinema technology \n\nadditional experiments with red-cyan anaglyph 3d images and 3d projection using linear polarization \n\nmeasure the rotation of the polarization angle of light passing through optically active media \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-polarized3dcinema-edu",
-      "solutionGroup": "training-kits",
-      "solutionUrl": "solutions/polarized-3d-cinema.html",
-      "categoryLabel": "Training Kits"
-    },
-    {
       "id": "quantum-eraser",
       "sku": "SET-QuantumEraser-EDU",
       "name": "SciEngTech ‘Quantum Eraser’ Educational Kit",
@@ -662,7 +607,7 @@
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": {
-        "tagline": "Designed for Educational, Demonstration, and Classroom Use",
+        "tagline": "Imaging Grids, FT, IFT",
         "demonstrates": [
           "Designed for Educational, Demonstration, and Classroom Use",
           "Demonstrate the principles of Fourier Optics Using a 4f Optical Setup",
@@ -681,24 +626,79 @@
         ]
       },
       "customNote": null,
-      "summary": "Designed for Educational, Demonstration, and Classroom Use",
-      "specHighlight": "Designed for Educational, Demonstration, and Classroom Use",
+      "summary": "Imaging Grids, FT, IFT",
+      "specHighlight": "Imaging Grids, FT, IFT",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "SciEngTech Fourier Optics Educational Kit\n\nDesigned for Educational, Demonstration, and Classroom Use \n\nDemonstrate the principles of Fourier Optics Using a 4f Optical Setup \n\nManipulate Images of 14 Chrome-on-Glass Microstructured Patterns \n\nInvestigate Formation and Manipulation of Images in the Context of a Microscope \n\nDemonstrate Various Image Processing Techniques \n\nKit Includes all Hardware and Tools (Computer Not Included) \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Fourier-EDU",
+      "body": "SciEngTech Fourier Optics Educational Kit\n\nImaging Grids, FT, IFT \n\nDemonstrate the principles of Fourier Optics Using a 4f Optical Setup \n\nManipulate Images of 14 Chrome-on-Glass Microstructured Patterns \n\nInvestigate Formation and Manipulation of Images in the Context of a Microscope \n\nDemonstrate Various Image Processing Techniques \n\nKit Includes all Hardware and Tools (Computer Not Included) \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Fourier-EDU",
       "image": "assets/products/fourier-optics-kit/primary.png",
       "tags": [
         "fourier optics kit",
         "training kit"
       ],
       "writeupPath": "Training Kit/Fourier Optics/Fourier Optics Educational Kit.docx",
-      "_search": "fourier-optics-kit set-fourier-edu sciengtech fourier optics educational kit solution training-kits training kits designed for educational, demonstration, and classroom use designed for educational, demonstration, and classroom use  fourier optics kit training kit sciengtech fourier optics educational kit\n\ndesigned for educational, demonstration, and classroom use \n\ndemonstrate the principles of fourier optics using a 4f optical setup \n\nmanipulate images of 14 chrome-on-glass microstructured patterns \n\ninvestigate formation and manipulation of images in the context of a microscope \n\ndemonstrate various image processing techniques \n\nkit includes all hardware and tools (computer not included) \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-fourier-edu",
+      "_search": "fourier-optics-kit set-fourier-edu sciengtech fourier optics educational kit solution training-kits training kits imaging grids, ft, ift imaging grids, ft, ift  fourier optics kit training kit sciengtech fourier optics educational kit\n\nimaging grids, ft, ift \n\ndemonstrate the principles of fourier optics using a 4f optical setup \n\nmanipulate images of 14 chrome-on-glass microstructured patterns \n\ninvestigate formation and manipulation of images in the context of a microscope \n\ndemonstrate various image processing techniques \n\nkit includes all hardware and tools (computer not included) \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-fourier-edu",
       "solutionGroup": "training-kits",
       "solutionUrl": "solutions/fourier-optics-kit.html",
+      "categoryLabel": "Training Kits"
+    },
+    {
+      "id": "polarized-3d-cinema",
+      "sku": "SET-Polarized3DCinema-EDU",
+      "name": "SciEngTech Polarization Optics Kit",
+      "type": "solution",
+      "pageTemplate": "solution",
+      "aliases": [],
+      "overview": [],
+      "features": [],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": {
+        "tagline": "Polarizers, HWP, QWP",
+        "demonstrates": [
+          "Learn how to Generate and Measure Linear and Circular Polarizations of Light",
+          "Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology",
+          "Additional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization",
+          "Measure the Rotation of the Polarization Angle of Light Passing through Optically Active Media"
+        ],
+        "kitIncludes": [
+          "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials",
+          "Choose from Educational Kits Containing Imperial or Metric Components",
+          "Includes Extensive Manual for Easy Assembly and Use",
+          "Kits Containing Metric Components"
+        ],
+        "capabilities": [
+          "Compact Design",
+          "Made in INDIA"
+        ]
+      },
+      "customNote": null,
+      "summary": "Polarizers, HWP, QWP",
+      "specHighlight": "Polarizers, HWP, QWP",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "SciEngTech Polarization Optics Kit\n\nComplete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials \n\nChoose from Educational Kits Containing Imperial or Metric Components \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nCreate a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology \n\nAdditional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization \n\nMeasure the Rotation of the Polarization Angle of Light Passing through Optically Active Media \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Polarized3DCinema-EDU",
+      "image": "assets/products/polarized-3d-cinema/primary.png",
+      "tags": [
+        "polarization optics kit",
+        "training kit"
+      ],
+      "writeupPath": "Training Kit/3D Cinema/3D Cinema.docx",
+      "_search": "polarized-3d-cinema set-polarized3dcinema-edu sciengtech polarization optics kit solution training-kits training kits polarizers, hwp, qwp polarizers, hwp, qwp  polarization optics kit training kit sciengtech polarization optics kit\n\ncomplete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials \n\nchoose from educational kits containing imperial or metric components \n\nlearn how to generate and measure linear and circular polarizations of light \n\nlearn how to generate and measure linear and circular polarizations of light \n\ncreate a 3d projection using circularly polarized light based on reald™ cinema technology \n\nadditional experiments with red-cyan anaglyph 3d images and 3d projection using linear polarization \n\nmeasure the rotation of the polarization angle of light passing through optically active media \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-polarized3dcinema-edu",
+      "solutionGroup": "training-kits",
+      "solutionUrl": "solutions/polarized-3d-cinema.html",
       "categoryLabel": "Training Kits"
     },
     {

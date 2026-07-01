@@ -11,6 +11,7 @@
     "slides": "node scripts/generate-slide-placeholders.mjs",
     "migrate-knowledge": "node scripts/migrate-knowledge.mjs",
     "build": "node scripts/generate-slide-placeholders.mjs && node scripts/ingest-writeup.mjs && node scripts/build-site.mjs",
+    "build:site": "node scripts/build-site.mjs",
     "apply-images": "node scripts/apply-image-selections.mjs && node scripts/build-site.mjs",
     "serve": "npx serve -l 3456 ."
   },
