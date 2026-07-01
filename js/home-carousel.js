@@ -4,6 +4,7 @@
   const titleEl = document.getElementById('carouselTitle');
   const specEl = document.getElementById('carouselSpec');
   const counterEl = document.getElementById('carouselCounter');
+  const metaLink = document.getElementById('carouselMeta');
   if (!slides.length) return;
   let index = 0;
   let timer;
@@ -20,6 +21,7 @@
     if (titleEl) titleEl.textContent = active.dataset.title || '';
     if (specEl) specEl.textContent = active.dataset.spec || '';
     if (counterEl) counterEl.textContent = pad(index + 1) + ' / ' + pad(slides.length);
+    if (metaLink && active.dataset.href) metaLink.href = active.dataset.href;
   }
 
   function next() {

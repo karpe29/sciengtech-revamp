@@ -63,6 +63,11 @@
   transition: border-color 0.2s, color 0.2s;
 }
 .search-trigger:hover { border-color: rgba(225,29,72,0.45); color: #fff; }
+.search-icon {
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.85);
+}
+.search-label { white-space: nowrap; }
 .search-trigger kbd {
   margin-left: auto;
   font: 500 0.65rem/1 'JetBrains Mono', monospace;
@@ -71,6 +76,51 @@
   border: 1px solid var(--border);
   color: var(--text-muted);
   background: var(--bg-elevated);
+}
+
+@media (max-width: 1024px) {
+  .nav-actions {
+    gap: 8px;
+    align-items: center;
+    margin-left: auto;
+  }
+  .cart-trigger,
+  .search-trigger,
+  .nav-menu-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-light);
+  }
+  .search-trigger,
+  .nav-menu-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+  }
+  .cart-icon,
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+  }
+  .search-trigger span:not(.search-icon),
+  .search-trigger .search-label,
+  .search-trigger kbd { display: none; }
+  .search-icon {
+    display: block;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.85);
+  }
 }
 
 /* Search overlay */
@@ -701,9 +751,6 @@ body.search-open { overflow: hidden; }
 }
 
 @media (max-width: 900px) {
-  .search-trigger { min-width: 44px; padding: 8px 12px; }
-  .search-trigger span:not(.search-icon) { display: none; }
-  .search-trigger kbd { display: none; }
   .product-detail-grid { grid-template-columns: 1fr; }
   .product-detail-blocks { grid-template-columns: 1fr; }
   .checkout-layout { grid-template-columns: 1fr; }

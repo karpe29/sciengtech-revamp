@@ -100,6 +100,8 @@ function shell({ base, title, desc, main, pageId = '', catalogMode = '', detailP
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="${base}assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="${base}assets/favicon.png" />
   <title>${esc(title)} | SciEngTech</title>
   <meta name="description" content="${esc(desc)}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -189,7 +191,23 @@ function write(rel, html) {
 }
 
 function componentProductUrl(id, linkBase) {
-  return `${linkBase}product.html?id=${encodeURIComponent(id)}`;
+  // Hash URL survives dev servers that strip ?id= when rewriting product.html → /product
+  return `${linkBase}product.html#${encodeURIComponent(id)}`;
+}
+
+function cleanLegacyProductPages() {
+  const legacyDir = path.join(ROOT, 'products');
+  if (!fs.existsSync(legacyDir)) return;
+  for (const name of fs.readdirSync(legacyDir)) {
+    if (!name.endsWith('.html')) continue;
+    const id = name.replace(/\.html$/i, '');
+    const rel = `products/${name}`;
+    write(
+      rel,
+      `<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta http-equiv="refresh" content="0;url=../product.html#${encodeURIComponent(id)}" /><title>Redirect</title></head><body><p><a href="../product.html#${encodeURIComponent(id)}">View specification</a></p></body></html>`
+    );
+  }
+  console.log('  legacy products/*.html → redirect to product.html#id');
 }
 
 function productCard(p, linkBase, assetBase, solutionPrefix) {
@@ -269,8 +287,9 @@ function buildHomepage() {
     .map((s, i) => {
       const img = s.image || placeholderSlide(i);
       const title = s.name.replace(/^['']|['']$/g, '');
-      return `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-title="${esc(title)}" data-spec="${esc(s.specHighlight)}">
-        <img src="${esc(img)}" alt="${esc(title)}" />
+      const href = s.solutionUrl || `solutions/${s.id}.html`;
+      return `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-title="${esc(title)}" data-spec="${esc(s.specHighlight)}" data-href="${esc(href)}">
+        <a href="${esc(href)}" class="carousel-slide-link" aria-label="${esc(title)}"><img src="${esc(img)}" alt="${esc(title)}" /></a>
       </div>`;
     })
     .join('\n');
@@ -306,10 +325,10 @@ function buildHomepage() {
           <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
           ${slideHtml}
         </div>
-        <div class="carousel-meta">
+        <a class="carousel-meta" id="carouselMeta" href="${esc(slides[0]?.solutionUrl || `solutions/${slides[0]?.id}.html` || 'solutions.html')}">
           <span class="slide-title" id="carouselTitle">${esc(slides[0]?.name.replace(/^['']|['']$/g, '') || '')}</span>
           <span class="slide-spec" id="carouselSpec">${esc(slides[0]?.specHighlight || '')}</span>
-        </div>
+        </a>
         <div class="carousel-thumbs" id="carouselThumbs">${thumbs}</div>
       </div>
     </div>
@@ -759,8 +778,10 @@ function main() {
   // Redirect legacy products.html to full catalog
   write(
     'products.html',
-    `<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=catalog.html" /><title>Redirect</title></head><body><p><a href="catalog.html">Full catalog</a></p></body></html>`
+    `<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="icon" href="assets/favicon.png" type="image/png" /><meta http-equiv="refresh" content="0;url=catalog.html" /><title>Redirect</title></head><body><p><a href="catalog.html">Full catalog</a></p></body></html>`
   );
+
+  cleanLegacyProductPages();
 
   buildSitemapAndRobots();
 

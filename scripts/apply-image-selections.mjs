@@ -77,7 +77,7 @@ const searchIndex = {
         (p.solutionGroup ? solutionGroupLabel(p.solutionGroup) : undefined),
     specHighlight: p.specHighlight,
     image: p.image,
-    url: p.solutionUrl || `product.html?id=${encodeURIComponent(p.id)}`,
+    url: p.solutionUrl || `product.html#${encodeURIComponent(p.id)}`,
     _search: p._search,
     featured: p.type === 'solution',
   })),

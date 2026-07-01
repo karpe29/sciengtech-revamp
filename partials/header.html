@@ -100,8 +100,11 @@
         <span class="cart-count" id="cartCount" hidden>0</span>
       </a>
       <button type="button" class="search-trigger" id="searchTrigger" aria-label="Open search">
-        <span class="search-icon">⌕</span>
-        <span>Search…</span>
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="search-label">Search…</span>
         <kbd>Ctrl K</kbd>
       </button>
       <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">

@@ -63,7 +63,7 @@
     var html = '';
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
-      var url = (window.__SITE_BASE__ || '') + 'product.html?id=' + encodeURIComponent(p.id);
+      var url = (window.__SITE_BASE__ || '') + 'product.html#' + encodeURIComponent(p.id);
       var media = p.image
         ? '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />'
         : '<span class="placeholder" aria-hidden="true">◇</span>';

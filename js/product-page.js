@@ -7,9 +7,15 @@
     }
     var params = new URLSearchParams(window.location.search);
     var id = params.get('id');
-    if (id) return id.trim();
+    if (id) return decodeURIComponent(id.trim());
     var hash = (window.location.hash || '').replace(/^#/, '').trim();
-    if (hash) return hash.indexOf('=') !== -1 ? (new URLSearchParams(hash).get('id') || hash) : hash;
+    if (hash) {
+      if (hash.indexOf('=') !== -1) {
+        id = new URLSearchParams(hash).get('id');
+        if (id) return decodeURIComponent(id.trim());
+      }
+      return decodeURIComponent(hash);
+    }
     var match = window.location.pathname.match(/\/product\/([^/]+)\/?$/i);
     return match ? decodeURIComponent(match[1]) : null;
   }

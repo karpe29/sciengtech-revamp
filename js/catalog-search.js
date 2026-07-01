@@ -49,8 +49,14 @@
 
     var root = typeof basePath === 'string' ? basePath : (window.__SITE_BASE__ || resolveBasePath());
     loadPromise = Promise.all([
-      fetch(root + 'data/search-index.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }),
-      fetch(root + 'data/products.json', { cache: 'force-cache' }).then(function (r) { return r.json(); })
+      fetch(root + 'data/search-index.json').then(function (r) {
+        if (!r.ok) throw new Error('search-index.json HTTP ' + r.status);
+        return r.json();
+      }),
+      fetch(root + 'data/products.json').then(function (r) {
+        if (!r.ok) throw new Error('products.json HTTP ' + r.status);
+        return r.json();
+      }),
     ]).then(function (pair) {
       var searchData = pair[0];
       var productData = pair[1];
@@ -201,21 +207,21 @@
         return root + products[i].url;
       }
     }
-    return root + 'product.html?id=' + encodeURIComponent(id);
+    return root + 'product.html#' + encodeURIComponent(id);
   }
 
   function resolveProductIdFromLocation() {
     var params = new URLSearchParams(window.location.search);
     var id = params.get('id');
-    if (id) return id.trim();
+    if (id) return decodeURIComponent(id.trim());
     var hash = (window.location.hash || '').replace(/^#/, '').trim();
     if (hash) {
       if (hash.indexOf('=') !== -1) {
         var hashParams = new URLSearchParams(hash);
         id = hashParams.get('id');
-        if (id) return id.trim();
+        if (id) return decodeURIComponent(id.trim());
       }
-      return hash;
+      return decodeURIComponent(hash);
     }
     var match = window.location.pathname.match(/\/product\/([^/]+)\/?$/i);
     if (match) return decodeURIComponent(match[1]);
