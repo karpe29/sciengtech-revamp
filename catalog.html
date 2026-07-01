@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-base="" data-page="catalog" data-catalog-mode="full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Catalog | SciEngTech</title>
+  <meta name="description" content="Search all SciEngTech solutions and components." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+  <main><section class="catalog-page">
+    <div class="wrap catalog-hero">
+      <h1>Full Technical Catalog</h1>
+      <p>Search and filter all 61 solutions and bench components across every category.</p>
+      <div class="catalog-toolbar">
+        <div class="catalog-toolbar-row">
+          <input type="search" class="catalog-search-input" id="catalogSearchInput" placeholder="Search solutions, components, SKUs, specifications…" autocomplete="off" />
+        </div>
+        <div class="catalog-toolbar-row">
+        <span class="catalog-filter-row-label">Type</span>
+        <div class="catalog-filters" id="catalogTypeFilters"></div>
+      </div>
+        <div class="catalog-toolbar-row">
+          <span class="catalog-filter-row-label">Category</span>
+          <div class="catalog-filters" id="catalogFilters"></div>
+        </div>
+      </div>
+      <p class="catalog-meta" id="catalogCount">Loading…</p>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section></main>
+  <div id="site-footer"></div>
+  <div id="site-search"></div>
+  <script>window.__SITE_BASE__ = "";</script>
+  <script src="js/catalog-search.js"></script>
+  <script src="js/quote-cart.js"></script>
+  <script src="js/cart-ui.js"></script>
+  <script src="js/header-search.js"></script>
+  <script src="js/site-chrome.js"></script>
+  <script src="js/catalog-page.js"></script>
+</body>
+</html>

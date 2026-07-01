@@ -8,7 +8,11 @@
   },
   "scripts": {
     "ingest": "node scripts/ingest-writeup.mjs",
-    "build": "node scripts/ingest-writeup.mjs && node scripts/build-site.mjs"
+    "slides": "node scripts/generate-slide-placeholders.mjs",
+    "migrate-knowledge": "node scripts/migrate-knowledge.mjs",
+    "build": "node scripts/generate-slide-placeholders.mjs && node scripts/ingest-writeup.mjs && node scripts/build-site.mjs",
+    "apply-images": "node scripts/apply-image-selections.mjs && node scripts/build-site.mjs",
+    "serve": "npx serve -l 3456 ."
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/karpe29/sciengtech-revamp/issues"
   },
-  "homepage": "https://github.com/karpe29/sciengtech-revamp#readme",
+  "homepage": "https://karpe29.github.io/sciengtech-revamp/",
   "devDependencies": {
     "mammoth": "^1.12.0",
     "xlsx": "^0.18.5"

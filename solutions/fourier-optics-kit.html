@@ -13,30 +13,35 @@
 </head>
 <body>
   <div id="site-header"></div>
-  <main><section class="product-detail">
+  <main><section class="product-detail product-detail--solution">
     <div class="wrap">
       <nav class="product-breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a> /
-        <a href="../solutions.html">Solutions</a> /
-        <a href="../solutions/training-kits.html">Training Kits</a> /
-        <span>SciEngTech Fourier Optics Educational Kit</span>
-      </nav>
+    <a href="../index.html">Home</a> /
+    <a href="../solutions.html">Solutions</a> /
+    <a href="../solutions/training-kits.html">Training Kits</a> /
+    <span>SciEngTech Fourier Optics Educational Kit</span>
+  </nav>
       <div class="product-detail-grid">
-        <div class="product-detail-media"><span class="placeholder" aria-hidden="true">◇</span></div>
-        <div>
+        <div class="product-detail-media"><img src="../assets/products/fourier-optics-kit/primary.png" alt="SciEngTech Fourier Optics Educational Kit" /></div>
+        <div class="product-detail-main">
           <p class="product-overline">Training Kits</p>
-          <h1>SciEngTech Fourier Optics Educational Kit</h1>
-          <p class="product-sku-line mono">SKU: SET-Fourier-EDU</p>
-          <p class="product-highlight mono">FEATURE: Demonstrate the principles of Fourier Optics Using a 4f Optical Setup | FEATURE: Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns | FEATURE: Investigate Formation and Manipula</p>
-          <div class="product-summary"><p>Designed for Educational, Demonstration, and Classroom Use </p><p>Demonstrate the principles of Fourier Optics Using a 4f Optical Setup </p><p>Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns </p><p>Investigate Formation and Manipulation of Images in the Context of a Microscope </p><p>Demonstrate Various Image Processing Techniques </p></div>
-          <div class="spec-table-detail">
-            <header>SYSTEM SPECIFICATION</header>
-            <div class="spec-row"><span>Feature</span><span>Demonstrate the principles of Fourier Optics Using a 4f Optical Setup</span></div><div class="spec-row"><span>Feature</span><span>Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns</span></div><div class="spec-row"><span>Feature</span><span>Investigate Formation and Manipulation of Images in the Context of a Microscope</span></div><div class="spec-row"><span>Feature</span><span>Demonstrate Various Image Processing Techniques</span></div><div class="spec-row"><span>Feature</span><span>Kit Includes all Hardware and Tools (Computer Not Included)</span></div><div class="spec-row"><span>Feature</span><span>Includes Extensive Manual for Easy Assembly and Use</span></div>
-          </div>
-          <div class="product-ctas">
-            <a class="btn btn-ruby" href="../engineering/rfq.html?product=fourier-optics-kit">Request Technical Quote</a>
-            <a class="btn btn-outline" href="../engineering/upload.html">Upload Schematics</a>
-          </div>
+    <h1>SciEngTech Fourier Optics Educational Kit</h1>
+    
+    <p class="product-sku-line mono">SKU: SET-Fourier-EDU</p>
+    <p class="product-tagline">Designed for Educational, Demonstration, and Classroom Use</p>
+    
+          
+    <div class="product-solution-section"><h2 class="product-section-title">What This Kit Demonstrates</h2><ul class="product-bullet-list"><li>Designed for Educational, Demonstration, and Classroom Use</li><li>Demonstrate the principles of Fourier Optics Using a 4f Optical Setup</li><li>Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns</li><li>Investigate Formation and Manipulation of Images in the Context of a Microscope</li><li>Demonstrate Various Image Processing Techniques</li></ul></div>
+    <div class="product-solution-section"><h2 class="product-section-title">What's Included</h2><ul class="product-bullet-list"><li>Kit Includes all Hardware and Tools (Computer Not Included)</li><li>Includes Extensive Manual for Easy Assembly and Use</li><li>Kits Containing Metric Components</li></ul></div>
+    <div class="product-solution-section"><h2 class="product-section-title">Key Capabilities</h2><ul class="product-bullet-list"><li>Compact Design</li><li>Made in INDIA</li></ul></div>
+    <div class="product-ctas">
+    <button type="button" class="btn btn-ruby" data-add-to-cart
+    data-product-id="fourier-optics-kit"
+    data-sku="SET-Fourier-EDU"
+    data-name="SciEngTech Fourier Optics Educational Kit"
+    >Add to Cart</button>
+    <a class="btn btn-outline" href="../engineering/rfq.html">Checkout</a>
+  </div>
         </div>
       </div>
     </div>
@@ -45,7 +50,14 @@
   <div id="site-search"></div>
   <script>window.__SITE_BASE__ = "../";</script>
   <script src="../js/catalog-search.js"></script>
+  <script src="../js/quote-cart.js"></script>
+  <script src="../js/cart-ui.js"></script>
   <script src="../js/header-search.js"></script>
   <script src="../js/site-chrome.js"></script>
+  <script src="../js/product-detail-render.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',function(){
+    if(window.SciEngProductDetail)window.SciEngProductDetail.initInteractions(document);
+    if(window.SciEngCartUI)window.SciEngCartUI.init(document);
+  });</script>
 </body>
 </html>

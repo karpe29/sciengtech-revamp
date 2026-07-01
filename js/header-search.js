@@ -34,14 +34,14 @@
     activeIndex = -1;
 
     if (!query) {
-      resultsEl.innerHTML = '<p class="search-hint">Type to search components, SKUs, wavelengths, and specifications.</p>';
+      resultsEl.innerHTML = '<p class="search-hint">Type to search solutions, components, SKUs, and specifications.</p>';
       if (statusEl) statusEl.textContent = '';
       return;
     }
 
     if (!list.length) {
       resultsEl.innerHTML =
-        '<p class="search-empty">No matching specifications. <a href="' + (window.__SITE_BASE__ || '') + 'components/search.html?q=' +
+        '<p class="search-empty">No matching specifications. <a href="' + (window.__SITE_BASE__ || '') + 'catalog.html?q=' +
         encodeURIComponent(query) +
         '">Browse full catalog</a> or contact a system engineer for custom requirements.</p>';
       if (statusEl) statusEl.textContent = '0 results';
@@ -51,7 +51,9 @@
     var html = '<ul class="search-result-list" role="listbox" id="searchResultList">';
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
-      var url = (window.__SITE_BASE__ || '') + (p.url || window.SciEngCatalog.productUrl(p.id));
+      var url = p.url
+        ? (window.__SITE_BASE__ || '') + p.url
+        : window.SciEngCatalog.productUrl(p.id);
       html +=
         '<li role="option" aria-selected="false">' +
         '<a class="search-result-item" href="' +
@@ -77,7 +79,7 @@
     html += '</ul>';
     if (list.length >= 12) {
       html +=
-        '<a class="search-view-all" href="' + (window.__SITE_BASE__ || '') + 'components/search.html?q=' +
+        '<a class="search-view-all" href="' + (window.__SITE_BASE__ || '') + 'catalog.html?q=' +
         encodeURIComponent(query) +
         '">View all matches in catalog →</a>';
     }
@@ -123,7 +125,11 @@
     if (idx >= 0 && items[idx]) items[idx].scrollIntoView({ block: 'nearest' });
   }
 
+  var initialized = false;
+
   function init() {
+    if (initialized) return;
+
     var trigger = document.getElementById('searchTrigger');
     var input = document.getElementById('globalSearchInput');
     var panel = document.getElementById('searchPanel');
@@ -131,6 +137,7 @@
     var closeBtn = document.getElementById('searchClose');
 
     if (!panel || !input) return;
+    initialized = true;
 
     window.SciEngCatalog.load().catch(function () {
       var resultsEl = document.getElementById('searchResults');
@@ -182,9 +189,17 @@
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
+  function tryInit() {
     init();
+  }
+
+  window.SciEngHeaderSearch = { init: tryInit };
+
+  document.addEventListener('site-chrome-ready', tryInit);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryInit);
+  } else {
+    tryInit();
   }
 })();

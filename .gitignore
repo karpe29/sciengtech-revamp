@@ -3,3 +3,5 @@ Thumbs.db
 *.log
 _writeup/
 node_modules/
+assets/image_0_*.jpeg
+quotation/

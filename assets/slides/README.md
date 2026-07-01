@@ -16,3 +16,5 @@ Revamped deep-tech product visuals for homepage carousel.
 **Visual system:** Dark grid floor · red laser accent · JetBrains Mono callouts · anodized aluminum hardware.
 
 Replace AI-generated slides (02–06) with WaveSpeed/your pipeline exports when ready.
+
+**Interim placeholders:** `node scripts/generate-slide-placeholders.mjs` writes `01–06` as dark-grid SVG files used by the homepage carousel and solutions strip until product photography is supplied.

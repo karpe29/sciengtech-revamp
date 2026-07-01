@@ -1,0 +1,22 @@
+{
+  "exportedAt": "2026-07-01T03:22:05.843Z",
+  "selections": [
+    { "id": "regenerative-delay-line", "type": "solution", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/regenerative-delay-line/image-2.png" },
+    { "id": "michelson-interferometer", "type": "solution", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/michelson-interferometer/image-2.png" },
+    { "id": "polarized-3d-cinema", "type": "solution", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/polarized-3d-cinema/image-2.png" },
+    { "id": "quantum-eraser", "type": "solution", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/quantum-eraser/image-2.png" },
+    { "id": "fourier-optics-kit", "type": "solution", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/fourier-optics-kit/image-2.png" },
+    { "id": "adapter", "type": "component", "decision": "use", "image": "primary.png", "path": "assets/imported/old-site/adapter/primary.png" },
+    { "id": "allen-bolt", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/allen-bolt/image-2.png" },
+    { "id": "baseplate", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/baseplate/image-2.png" },
+    { "id": "breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa/image-2.png" },
+    { "id": "collars", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/collars/image-2.png" },
+    { "id": "hex-nut", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/hex-nut/image-2.png" },
+    { "id": "kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro", "type": "component", "decision": "use", "image": "primary.png", "path": "assets/imported/old-site/kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro/primary.png" },
+    { "id": "labjack", "type": "component", "decision": "use", "image": "primary.png", "path": "assets/imported/old-site/labjack/primary.png" },
+    { "id": "lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel/image-2.png" },
+    { "id": "linear-stage", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/linear-stage/image-2.png" },
+    { "id": "spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool/image-2.png" },
+    { "id": "washer", "type": "component", "decision": "use", "image": "image-2.png", "path": "assets/imported/old-site/washer/image-2.png" }
+  ]
+}

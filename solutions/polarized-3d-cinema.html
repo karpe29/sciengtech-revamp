@@ -13,30 +13,35 @@
 </head>
 <body>
   <div id="site-header"></div>
-  <main><section class="product-detail">
+  <main><section class="product-detail product-detail--solution">
     <div class="wrap">
       <nav class="product-breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a> /
-        <a href="../solutions.html">Solutions</a> /
-        <a href="../solutions/training-kits.html">Training Kits</a> /
-        <span>SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit</span>
-      </nav>
+    <a href="../index.html">Home</a> /
+    <a href="../solutions.html">Solutions</a> /
+    <a href="../solutions/training-kits.html">Training Kits</a> /
+    <span>SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit</span>
+  </nav>
       <div class="product-detail-grid">
-        <div class="product-detail-media"><span class="placeholder" aria-hidden="true">◇</span></div>
-        <div>
+        <div class="product-detail-media"><img src="../assets/products/polarized-3d-cinema/primary.png" alt="SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit" /></div>
+        <div class="product-detail-main">
           <p class="product-overline">Training Kits</p>
-          <h1>SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit</h1>
-          <p class="product-sku-line mono">SKU: SET-Polarized3DCinema-EDU</p>
-          <p class="product-highlight mono">FEATURE: Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials | FEATURE: Choose from Educational Kits Containing Imperial or Metric Components | F</p>
-          <div class="product-summary"><p>Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials </p><p>Choose from Educational Kits Containing Imperial or Metric Components </p><p>Learn how to Generate and Measure Linear and Circular Polarizations of Light </p><p>Learn how to Generate and Measure Linear and Circular Polarizations of Light </p><p>Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology </p></div>
-          <div class="spec-table-detail">
-            <header>SYSTEM SPECIFICATION</header>
-            <div class="spec-row"><span>Feature</span><span>Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials</span></div><div class="spec-row"><span>Feature</span><span>Choose from Educational Kits Containing Imperial or Metric Components</span></div><div class="spec-row"><span>Feature</span><span>Learn how to Generate and Measure Linear and Circular Polarizations of Light</span></div><div class="spec-row"><span>Feature</span><span>Learn how to Generate and Measure Linear and Circular Polarizations of Light</span></div><div class="spec-row"><span>Feature</span><span>Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology</span></div><div class="spec-row"><span>Feature</span><span>Additional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization</span></div>
-          </div>
-          <div class="product-ctas">
-            <a class="btn btn-ruby" href="../engineering/rfq.html?product=polarized-3d-cinema">Request Technical Quote</a>
-            <a class="btn btn-outline" href="../engineering/upload.html">Upload Schematics</a>
-          </div>
+    <h1>SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit</h1>
+    
+    <p class="product-sku-line mono">SKU: SET-Polarized3DCinema-EDU</p>
+    
+    
+          
+    <div class="product-solution-section"><h2 class="product-section-title">What This Kit Demonstrates</h2><ul class="product-bullet-list"><li>Learn how to Generate and Measure Linear and Circular Polarizations of Light</li><li>Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology</li><li>Additional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization</li><li>Measure the Rotation of the Polarization Angle of Light Passing through Optically Active Media</li></ul></div>
+    <div class="product-solution-section"><h2 class="product-section-title">What's Included</h2><ul class="product-bullet-list"><li>Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials</li><li>Choose from Educational Kits Containing Imperial or Metric Components</li><li>Includes Extensive Manual for Easy Assembly and Use</li><li>Kits Containing Metric Components</li></ul></div>
+    <div class="product-solution-section"><h2 class="product-section-title">Key Capabilities</h2><ul class="product-bullet-list"><li>Compact Design</li><li>Made in INDIA</li></ul></div>
+    <div class="product-ctas">
+    <button type="button" class="btn btn-ruby" data-add-to-cart
+    data-product-id="polarized-3d-cinema"
+    data-sku="SET-Polarized3DCinema-EDU"
+    data-name="SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit"
+    >Add to Cart</button>
+    <a class="btn btn-outline" href="../engineering/rfq.html">Checkout</a>
+  </div>
         </div>
       </div>
     </div>
@@ -45,7 +50,14 @@
   <div id="site-search"></div>
   <script>window.__SITE_BASE__ = "../";</script>
   <script src="../js/catalog-search.js"></script>
+  <script src="../js/quote-cart.js"></script>
+  <script src="../js/cart-ui.js"></script>
   <script src="../js/header-search.js"></script>
   <script src="../js/site-chrome.js"></script>
+  <script src="../js/product-detail-render.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',function(){
+    if(window.SciEngProductDetail)window.SciEngProductDetail.initInteractions(document);
+    if(window.SciEngCartUI)window.SciEngCartUI.init(document);
+  });</script>
 </body>
 </html>

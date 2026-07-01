@@ -1,7 +1,8 @@
-# Homepage Content Mapping — Old sciengtech.in → New Homepage
+# Homepage Content Mapping — Old sciengtech.in → New Homepage (v3.0 — Quantum)
 
 > **Scope:** Homepage only (`https://sciengtech.in/` → new `/`).  
-> **New model:** RFQ-led B2B (Gemini-aligned). No cart on homepage.
+> **New model:** Quantum-led RFQ B2B. No cart on homepage.  
+> **Live reference:** [`index.html`](../index.html)
 
 ---
 
@@ -105,7 +106,7 @@
 | Opto Mechanics | `/our-oem-products-opto-mechanics/` | `/components/optomechanics/` |
 | Hardware and Tools | `/product-category/hardware-and-tools/` | `/components/optomechanics/posts-rails-hardware/` or hardware cat |
 | Optical Cleaning Accessories | `/optical-cleaning-accessories/` | `/utilities/cleanroom-cleaning/` |
-| Training Kit | `/our-oem-products-training-kits/` | `/solutions/quantum-optical-research/` |
+| Training Kit | `/our-oem-products-training-kits/` | `/solutions/[slug].html` (8 individual pages) |
 | Optics | `/optics/` | `/components/precision-optics/` |
 | Optical Post | `/our-oem-products-optomechanics-posts/` | `/components/optomechanics/posts-rails-hardware/` |
 | Post Holder | `/our-oem-products-optomechanics-post-holder/` | Same subtree |
@@ -127,7 +128,7 @@
 | Opto-Mechanics | Yes | Pillar **02** + Components mega | `/components/optomechanics/` |
 | Hardware & Tools | Yes | Pillar **02** (absorbed) | `/components/optomechanics/posts-rails-hardware/` |
 | Optical Cleaning Accessories | Yes | Not on HP body | `/utilities/cleanroom-cleaning/` |
-| Training Kits | Yes | Not on HP body | `/solutions/quantum-optical-research/` |
+| Training Kits | Yes | Pillar **02** + Solutions strip + carousel | `/solutions/training-kits.html` + individual pages |
 | Optics | Yes | Pillar **01** | `/components/precision-optics/` |
 | Lasers | Yes | Pillar **01** | `/components/lasers-photonics/` |
 | Detectors | Yes | Not on HP body | `/utilities/detectors-sensors/` |
@@ -183,19 +184,20 @@ flowchart LR
     FOOT[Footer shop link]
   end
 
-  subgraph NEW["New homepage"]
-    NAV_NEW[Nav: Solutions + Components mega + Utilities]
-    HERO[Single hero + RFQ CTA]
-    PROOF[Institutional logos NEW]
-    PILLAR[3 pillars merged]
-    DATA[Quality inspected NEW]
-    UPLOAD[Schematic upload NEW]
+  subgraph NEW["New homepage (v3.0 Quantum)"]
+    NAV_NEW[Nav: Solutions mega + Components mega + About]
+    HERO[Quantum hero + 5-slide solutions carousel]
+    STRIP[Quantum solutions horizontal strip]
+    PROOF[Institutional logos]
+    PILLAR[3 pillars: Quantum · Training · Bench]
+    DATA[Quality inspected]
+    UPLOAD[Schematic upload CTA]
     FOOT_NEW[Footer + credentials]
   end
 
   NAV_OLD --> NAV_NEW
   CAR --> HERO
-  CAR --> PILLAR
+  CAR --> STRIP
   GRID --> PILLAR
   GRID --> NAV_NEW
   KC --> NAV_NEW

@@ -171,8 +171,31 @@
     });
   }
 
+  function getFilterCategories(options) {
+    options = options || {};
+    var typeFilter = options.type || null;
+    if (!products) return [];
+    var map = Object.create(null);
+    for (var i = 0; i < products.length; i++) {
+      var p = products[i];
+      if (typeFilter && p.type !== typeFilter) continue;
+      var catId = p.category || 'uncategorized';
+      if (!map[catId]) {
+        map[catId] = { id: catId, label: p.categoryLabel || catId, count: 0 };
+      }
+      map[catId].count++;
+    }
+    return Object.keys(map)
+      .map(function (k) {
+        return map[k];
+      })
+      .sort(function (a, b) {
+        return a.label.localeCompare(b.label);
+      });
+  }
+
   function productUrl(id, basePath) {
-    var root = basePath || window.__SITE_BASE__ || '';
+    var root = basePath == null ? window.__SITE_BASE__ || '' : basePath;
     for (var i = 0; i < (products || []).length; i++) {
       if (products[i].id === id && products[i].url) {
         return root + products[i].url;
@@ -181,12 +204,32 @@
     return root + 'product.html?id=' + encodeURIComponent(id);
   }
 
+  function resolveProductIdFromLocation() {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    if (id) return id.trim();
+    var hash = (window.location.hash || '').replace(/^#/, '').trim();
+    if (hash) {
+      if (hash.indexOf('=') !== -1) {
+        var hashParams = new URLSearchParams(hash);
+        id = hashParams.get('id');
+        if (id) return id.trim();
+      }
+      return hash;
+    }
+    var match = window.location.pathname.match(/\/product\/([^/]+)\/?$/i);
+    if (match) return decodeURIComponent(match[1]);
+    return null;
+  }
+
   global.SciEngCatalog = {
     load: load,
     search: search,
     getById: getById,
     getCategories: getCategories,
+    getFilterCategories: getFilterCategories,
     productUrl: productUrl,
-    getAll: function () { return components ? components.slice() : []; }
+    resolveProductIdFromLocation: resolveProductIdFromLocation,
+    getAll: function () { return products ? products.slice() : []; }
   };
 })(typeof window !== 'undefined' ? window : global);

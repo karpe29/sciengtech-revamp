@@ -1,7 +1,7 @@
-# SciEngTech — Brand Style Guide (v2.0)
+# SciEngTech — Brand Style Guide (v3.0 — Quantum)
 
-> **Scope:** Digital brand system for sciengtech.in revamp — Deep-Tech B2B, RFQ-led.  
-> **Status:** Aligned to Gemini strategic repositioning. Validate logo against dark UI before sign-off.
+> **Scope:** Digital brand system for sciengtech.in revamp — Quantum Optics B2B, RFQ-led.  
+> **Status:** Quantum strategy locked July 2026. Validate logo against dark UI before sign-off.
 
 ---
 
@@ -13,46 +13,47 @@
 |---------|-----|-------|
 | Legal / formal | **Sci.Eng.Tech Solutions** | SciEngTech Solutions (in contracts) |
 | Digital / nav | **SciEngTech** or **SciEngTech Solutions** | SET, S.E.T., Sci Eng Tech |
-| Tagline lockup | *Precision Hardware for Advanced Science and Engineering* | "Specialists in Lasers and Optics" (legacy — retire) |
+| Tagline lockup | *Integrated Quantum Systems for Research, Education, and Advanced Photonics* | "Specialists in Lasers and Optics" (legacy — retire) |
+| Secondary line | *Quantum Optics Infrastructure* (overline / nav context) | "Precision Hardware for Advanced Science and Engineering" (v2.0 — retire as H1) |
 | Legacy phrases | — | "India's first optics e-cart", "economical items", "Welcome to our website" |
 
 ### 1.2 Strategic Repositioning
 
-**Sci.Eng.Tech Solutions** is deeply rooted in high-precision hardware — catering to labs, defense, space tech, and academic institutions. The current digital presentation hides this high-spec engineering under a standard, template-heavy layout.
+**Sci.Eng.Tech Solutions** engineers turnkey quantum optics systems, educational photonics kits, and precision bench hardware for India's research and academic institutions. The legacy site presented this capability as a generic optics e-cart.
 
 ```
 [Current Core Issue]
-Dense navigation + generic e-commerce structure ("add to cart" for high-end optical mirrors)
-+ fragmented technical categories
-= High drop-off from B2B clients, defense labs, and elite engineering institutes.
+Generic e-commerce template + mixed OEM carousel
+= Quantum systems and training kits hidden behind commodity component shopping.
 ```
 
 **The shift:**
 
 | From | To |
 |------|-----|
-| Standard e-commerce shop | **Premier Deep-Tech Hardware Infrastructure Engine** |
-| Selling components | **Powering reliable, field-tested engineering systems** |
-| Price-led consumer copy | **Spec-led, compliance-led institutional copy** |
+| Standard e-commerce shop | **Quantum Optics Infrastructure partner** |
+| Component catalog as homepage story | **Integrated quantum set-ups & training kits** lead |
+| Price-led consumer copy | **Spec-led, education-ready institutional copy** |
 | Cart / checkout | **Request Technical Quote + schematic upload** |
 
 ### 1.3 Brand Essence
 
 | Element | Definition |
 |---------|------------|
-| **Purpose** | Supply certified, field-tested photonics and lab hardware that withstands absolute tolerances for India's most demanding R&D environments. |
-| **Promise** | Rigorous compliance. Guaranteed field performance. Operational certainty in procurement. |
-| **Personality** | Absolute Precision · Authoritative · Minimalist · Field-Tested |
-| **Not** | Discount shop · Generic importer · Template B2C catalog · Hype-driven startup |
+| **Purpose** | Supply turnkey quantum optics systems, educational photonics kits, and bench hardware for India's quantum research and photonics education programs. |
+| **Promise** | Turnkey demonstration set-ups. Classroom-ready kits. Made in India engineering support. |
+| **Personality** | Absolute Precision · Authoritative · Minimalist · Education-Ready |
+| **Not** | Discount shop · Generic importer · Template B2C catalog · Broad hardware supermarket |
 
 ### 1.4 Value Pillars (Reframed for B2B)
 
 | Pillar | Message | Proof direction |
 |--------|---------|-----------------|
-| **Precision** | Micron-tolerance optomechanics and wavelength-specified optics | Spec tables, inspection process |
+| **Quantum systems** | Entangled photon sources, QKD, demonstration experiments | Solution spec pages, SPDC/810 nm specs |
+| **Education** | Classroom-ready training kits with manuals | Training kit pages, curriculum copy |
+| **Bench precision** | Opto-mechanics and motion hardware for lab assembly | Component spec tables |
 | **Compliance** | Quality-inspected dispatch; institutional procurement ready | GST, GeM, validation metrics |
-| **Field performance** | Components tested for structural integrity before dispatch | "100% Quality Inspected" (validate operationally) |
-| **Engineering partnership** | Direct access to system engineers, not sales scripts | RFQ portal, schematic upload, SLA |
+| **Engineering partnership** | Direct access to system engineers | RFQ portal, schematic upload |
 
 **Retire from primary messaging:** "Speed, Quality, Value, Service" as consumer-facing shorthand — keep internally if needed for sales decks.
 
@@ -64,11 +65,12 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 | Segment | Priority | What they need |
 |---------|----------|----------------|
-| **Defense & space labs** | Highest | Certified specs, traceability, tender/GeM readiness, NDA-friendly engagement |
-| **Elite academic / research institutes** | High | Quantum/optics systems, metrology suites, technical whitepapers |
-| **Industrial R&D / photonics OEM** | High | Custom fabrication, `.STEP`/`.DXF` submission, volume quotes |
+| **Elite academic / quantum labs** | Highest | Turnkey quantum set-ups, entangled photon sources, demonstration kits |
+| **Photonics education programs** | Highest | Training kits (interferometry, Fourier optics, QKD analogy), classroom documentation |
+| **Quantum / photonics R&D** | High | Custom set-ups, schematic upload, engineering verification |
 | **Lab procurement / institutional buyers** | High | GST invoices, PO workflows, vendor credentials, lead times |
-| **General university labs** | Secondary | Training systems under Solutions, not primary nav focus |
+| **Defense & space labs** | Secondary | Bench components, traceability, tender/GeM readiness |
+| **Industrial R&D / photonics OEM** | Secondary | Custom fabrication, volume quotes |
 
 ### 2.2 Tone of Voice Attributes
 
@@ -85,10 +87,10 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 | Do say | Don't say |
 |--------|-----------|
-| "Precision-engineered optics for quantum research and industrial applications." | "Welcome to our website. We offer high-quality items at economical prices with great expertise." |
-| "Request a technical quote for certified components." | "Add to cart" / "Shop now" / "Buy online" |
-| "Upload engineering schematics for verification." | "Contact us for more info" (vague) |
-| "Sourcing certified optics, optomechanics, and vacuum systems." | "Browse our wide range of services below" |
+| "Turnkey entangled photon sources and quantum demonstration set-ups for research and education." | "Welcome to our website. We offer high-quality items at economical prices with great expertise." |
+| "Request a technical quote for quantum systems and training kits." | "Add to cart" / "Shop now" / "Buy online" |
+| "Classroom-ready photonics kits with extensive manuals and teaching materials." | "Browse our wide range of services below" |
+| "Bench components for quantum optical assembly — opto-mechanics, stages, and optics." | Leading with vacuum/chillers as primary brand story (Phase 2) |
 
 **Why:** Deep-tech buyers don't buy "economical items." They source certified, reliable components that won't ruin a million-dollar experiment or industrial line.
 
@@ -96,10 +98,11 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 | Context | Tone | Example |
 |---------|------|---------|
-| Homepage hero | Authoritative, outcome-led | "Precision Hardware for Advanced Science and Engineering." |
+| Homepage hero | Authoritative, quantum-led | "Integrated Quantum Systems for Research, Education, and Advanced Photonics." |
+| Solution specs | Neutral, system-dense | "Integrated, continuous-wave 15 mW pump laser at 405 nm · Type II SPDC around 810 nm" |
 | Component specs | Neutral, data-dense | "Clear aperture: 25 mm · Surface: λ/10 · Coating: HR @ 800 nm" |
-| CTAs | Direct, engineering-led | "Request Technical Quote" / "Upload Tech Specs & Connect" |
-| Institutional block | Credible, understated | "Powering research across India's leading defense, space, and academic labs." |
+| CTAs | Direct, engineering-led | "Request Technical Quote" / "Explore Quantum Solutions" |
+| Institutional block | Credible, understated | "Powering quantum optics education and research across India's leading academic and R&D laboratories." |
 | Legal / policy | Plain, formal | Standard contractual language |
 
 ### 2.5 Writing Rules

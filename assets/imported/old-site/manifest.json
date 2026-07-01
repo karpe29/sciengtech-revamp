@@ -1,0 +1,202 @@
+﻿[
+    {
+        "id":  "regenerative-delay-line",
+        "name":  "Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-supercontinuum-generation-kit/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/regenerative-delay-line"
+    },
+    {
+        "id":  "entangled-photon-source",
+        "name":  "Entangled Photon Source with Integrated Laser",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-entangled-photon-source/; https://sciengtech.in/our-oem-products-training-kits/",
+        "images":  "primary.jpg, image-2.png",
+        "folder":  "assets/imported/old-site/entangled-photon-source"
+    },
+    {
+        "id":  "bomb-tester",
+        "name":  "SciEngTech â€˜Bomb Testerâ€™ Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-bombtester-kit/",
+        "images":  "image-2.png",
+        "folder":  "assets/imported/old-site/bomb-tester"
+    },
+    {
+        "id":  "michelson-interferometer",
+        "name":  "SciEngTech â€˜Michelson Interferometerâ€™ Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-michelson-interferometer-kit/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/michelson-interferometer"
+    },
+    {
+        "id":  "polarized-3d-cinema",
+        "name":  "SciEngTech â€˜Polarization and â€˜Polarized 3D Cinemaâ€™ Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-polarized-3d-cinema/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/polarized-3d-cinema"
+    },
+    {
+        "id":  "quantum-eraser",
+        "name":  "SciEngTech â€˜Quantum Eraserâ€™ Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-quantum-eraser/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/quantum-eraser"
+    },
+    {
+        "id":  "fourier-optics-kit",
+        "name":  "SciEngTech Fourier Optics Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits-fourier-optics-training-kit/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/fourier-optics-kit"
+    },
+    {
+        "id":  "quantum-key-distribution",
+        "name":  "SciEngTech Quantum Key Distribution Analogy Educational Kit",
+        "type":  "solution",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-training-kits/",
+        "images":  "primary.png",
+        "folder":  "assets/imported/old-site/quantum-key-distribution"
+    },
+    {
+        "id":  "adapter",
+        "name":  "Adapter",
+        "type":  "component",
+        "legacyPages":  "",
+        "images":  "primary.png",
+        "folder":  "assets/imported/old-site/adapter"
+    },
+    {
+        "id":  "allen-bolt",
+        "name":  "Allen Bolt",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/allen-bolts/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/allen-bolt"
+    },
+    {
+        "id":  "baseplate",
+        "name":  "BasePlate",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/post-base/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/baseplate"
+    },
+    {
+        "id":  "breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa",
+        "name":  "BreadBoard(Optomechanical Platform, Optical Mounting Board, Precision Mounting Board)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/breadboards/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa"
+    },
+    {
+        "id":  "collars",
+        "name":  "Collars",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/collars/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/collars"
+    },
+    {
+        "id":  "diode-laser",
+        "name":  "Diode Laser",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-laser-diode-module-5mw-laser-diode-module/",
+        "images":  "primary.png, image-2.jpg",
+        "folder":  "assets/imported/old-site/diode-laser"
+    },
+    {
+        "id":  "fiber-optics-collimator",
+        "name":  "Fiber Optics Collimator",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/optics/",
+        "images":  "primary.png",
+        "folder":  "assets/imported/old-site/fiber-optics-collimator"
+    },
+    {
+        "id":  "hex-nut",
+        "name":  "Hex Nut",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/hex-nut-din-934-is-1363/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/hex-nut"
+    },
+    {
+        "id":  "kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro",
+        "name":  "Kinematic Mirror Mount (Kinematic Optic Mount, Precision Mirror Mount, Kinematic Rotation Mount)",
+        "type":  "component",
+        "legacyPages":  "",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro"
+    },
+    {
+        "id":  "labjack",
+        "name":  "Labjack",
+        "type":  "component",
+        "legacyPages":  "",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/labjack"
+    },
+    {
+        "id":  "lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel",
+        "name":  "Lens Mount(Lens Holder, Optical Lens Mount, Fixed Lens Holder, Lens Housing, OptiCell Lens Mount)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/lens-mount/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel"
+    },
+    {
+        "id":  "linear-stage",
+        "name":  "Linear Stage",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/translation-stage/",
+        "images":  "primary.png, image-2.png, image-3.png, image-4.png, image-5.png, image-6.png",
+        "folder":  "assets/imported/old-site/linear-stage"
+    },
+    {
+        "id":  "optical-post-optomechanical-support-post-mounting-post-optical-mounting-rod-thre",
+        "name":  "Optical Post(Optomechanical Support Post, Mounting Post, Optical Mounting Rod,Threaded Mounting Post)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-optomechanics-posts-our-products_12mm-post/",
+        "images":  "primary.png",
+        "folder":  "assets/imported/old-site/optical-post-optomechanical-support-post-mounting-post-optical-mounting-rod-thre"
+    },
+    {
+        "id":  "pedestal-post-holder-pedestal-post-mount-fixed-height-post-mount-rigid-post-pede",
+        "name":  "Pedestal Post Holder(Pedestal Post Mount,Fixed Height Post Mount, Rigid Post Pedestal)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/pedestal-post-holder/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/pedestal-post-holder-pedestal-post-mount-fixed-height-post-mount-rigid-post-pede"
+    },
+    {
+        "id":  "spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool",
+        "name":  "Spanner Wrench(Optic Lock Ring Tool, Optic Adjustment Tool)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-spanner-wrench/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool"
+    },
+    {
+        "id":  "swivel-base-adapter-swivel-mounting-base",
+        "name":  "Swivel Base Adapter(Swivel Mounting Base)",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/our-oem-products-optomechanics-post-holder/",
+        "images":  "primary.png, image-2.png",
+        "folder":  "assets/imported/old-site/swivel-base-adapter-swivel-mounting-base"
+    },
+    {
+        "id":  "washer",
+        "name":  "Washer",
+        "type":  "component",
+        "legacyPages":  "https://sciengtech.in/product/plain-flat-washers/",
+        "images":  "primary.png, image-2.png, image-3.png",
+        "folder":  "assets/imported/old-site/washer"
+    }
+]

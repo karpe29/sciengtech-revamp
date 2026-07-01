@@ -6,6 +6,13 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import mammoth from 'mammoth';
+import {
+  parseWriteupBody,
+  buildSpecHighlight,
+  buildLegacySpecs,
+} from './parse-writeup.mjs';
+import { patchSolutionsCatalog } from './patch-solutions-catalog.mjs';
+import { solutionGroupLabel } from './solution-groups.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -48,35 +55,15 @@ function slugify(name) {
     .slice(0, 80);
 }
 
-function parseSpecs(text) {
-  const specs = [];
-  const codeMatch = text.match(/Product Code:\s*([A-Z0-9-]+)/i);
-  const sku = codeMatch ? codeMatch[1].trim() : null;
-
-  const lines = text
-    .split(/\r?\n/)
-    .map((l) => l.trim())
-    .filter(Boolean);
-
-  const bullets = lines.filter(
-    (l) =>
-      l.length > 3 &&
-      l.length < 120 &&
-      !/^Product Code:/i.test(l) &&
-      !/^SciEngTech/i.test(l) &&
-      !/^Designed for/i.test(l)
-  );
-
-  bullets.slice(0, 8).forEach((line, i) => {
-    if (line.includes(':') && line.length < 80) {
-      const [label, ...rest] = line.split(':');
-      specs.push({ label: label.trim(), value: rest.join(':').trim() });
-    } else if (i < 6) {
-      specs.push({ label: 'Feature', value: line });
-    }
-  });
-
-  return { sku, specs };
+function structuredFields(text, { isSolution, categorySlug }) {
+  const parsed = parseWriteupBody(text, { isSolution, categorySlug });
+  const sku =
+    parsed.productCode ||
+    `SET-${slugify(parsed.name || 'item')
+      .toUpperCase()
+      .replace(/-/g, '')
+      .slice(0, 12)}`;
+  return { ...parsed, sku };
 }
 
 function findImages(dir) {
@@ -104,10 +91,15 @@ function makeSearch(p) {
     p.type,
     p.category,
     p.categoryLabel,
+    p.pageTemplate,
     p.summary,
     p.specHighlight,
+    (p.aliases || []).join(' '),
+    (p.features || []).join(' '),
+    (p.applications || []).join(' '),
     (p.tags || []).join(' '),
     (p.specs || []).map((s) => `${s.label} ${s.value}`).join(' '),
+    (p.variants || []).map((v) => Object.values(v).join(' ')).join(' '),
     p.body || '',
   ]
     .join(' ')
@@ -156,6 +148,26 @@ async function main() {
   const solutions = [];
   const components = [];
 
+  const prevCatalogPath = path.join(DATA_OUT, 'catalog.json');
+  const prevImages = Object.create(null);
+  if (fs.existsSync(prevCatalogPath)) {
+    const prev = JSON.parse(fs.readFileSync(prevCatalogPath, 'utf8'));
+    for (const p of [...(prev.solutions || []), ...(prev.components || [])]) {
+      if (p.image) prevImages[p.id] = p.image;
+    }
+  }
+
+  function resolveProductImage(id, writeupImage) {
+    if (writeupImage) return writeupImage;
+    if (prevImages[id]) return prevImages[id];
+    const prodDir = path.join(ROOT, 'assets', 'products', id);
+    if (fs.existsSync(prodDir)) {
+      const primary = fs.readdirSync(prodDir).find((f) => f.startsWith('primary.'));
+      if (primary) return `assets/products/${id}/${primary}`.replace(/\\/g, '/');
+    }
+    return null;
+  }
+
   for (const file of docxFiles) {
     const text = await parseDocx(file.full);
     const topCat = getTopCategory(file.rel);
@@ -164,12 +176,21 @@ async function main() {
       topCat === 'Training Kit' ||
       SOLUTION_SLUGS[file.name];
 
-    const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
-    const name = cleanName(lines[0] || file.name.replace(/\.docx$/i, ''));
-    const { sku, specs } = parseSpecs(text);
+    const catMeta = !isSolution
+      ? CATEGORY_MAP[topCat] || { slug: slugify(topCat), label: topCat }
+      : null;
+    const parsed = structuredFields(text, {
+      isSolution,
+      categorySlug: catMeta?.slug || '',
+    });
+    const name = cleanName(parsed.name || file.name.replace(/\.docx$/i, ''));
     const summary =
-      lines.find((l) => l.length > 40 && !/^SciEngTech/i.test(l)) ||
-      lines.slice(1, 3).join(' ') ||
+      parsed.overview[0] ||
+      parsed.solutionContent?.tagline ||
+      text
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .find((l) => l.length > 40 && !/^SciEngTech/i.test(l)) ||
       name;
 
     const id = isSolution
@@ -177,27 +198,28 @@ async function main() {
       : slugify(name);
 
     const images = findImages(path.dirname(file.full));
-    let image = null;
-    if (images.length) {
-      image = copyAsset(images[0], id);
-    }
-
-    const specHighlight =
-      specs.length > 0
-        ? specs
-            .slice(0, 3)
-            .map((s) => `${s.label.toUpperCase()}: ${s.value}`)
-            .join(' | ')
-        : sku || 'RFQ | Full specification on request';
+    const image = resolveProductImage(id, images.length ? copyAsset(images[0], id) : null);
 
     const item = {
       id,
-      sku: sku || `SET-${id.toUpperCase().replace(/-/g, '').slice(0, 12)}`,
+      sku: parsed.sku,
       name,
       type: isSolution ? 'solution' : 'component',
+      pageTemplate: parsed.pageTemplate,
+      aliases: parsed.aliases,
+      overview: parsed.overview,
+      features: parsed.features,
+      applications: parsed.applications,
+      techSpecs: parsed.techSpecs,
+      keyValueSpecs: parsed.keyValueSpecs,
+      variants: parsed.variants,
+      configurationOptions: parsed.configurationOptions,
+      rfqSections: parsed.rfqSections,
+      solutionContent: parsed.solutionContent,
+      customNote: parsed.customNote,
       summary: summary.slice(0, 500),
-      specHighlight: specHighlight.slice(0, 200),
-      specs: specs.length ? specs : [{ label: 'Procurement', value: 'Request Technical Quote' }],
+      specHighlight: buildSpecHighlight(parsed, parsed.sku).slice(0, 200),
+      specs: buildLegacySpecs(parsed),
       body: text,
       image,
       tags: [id.replace(/-/g, ' '), topCat.toLowerCase()],
@@ -209,13 +231,10 @@ async function main() {
     if (isSolution) {
       item.solutionGroup =
         topCat === 'Training Kit' ? 'training-kits' : 'quantum-setups';
+      item.categoryLabel = solutionGroupLabel(item.solutionGroup);
       item.solutionUrl = `solutions/${id}.html`;
       solutions.push(item);
     } else {
-      const catMeta = CATEGORY_MAP[topCat] || {
-        slug: slugify(topCat),
-        label: topCat,
-      };
       item.category = catMeta.slug;
       item.categoryLabel = catMeta.label;
       item.categoryPath = `/components/${catMeta.slug}.html`;
@@ -230,6 +249,8 @@ async function main() {
     components: components.sort((a, b) => a.name.localeCompare(b.name)),
     counts: { solutions: solutions.length, components: components.length },
   };
+
+  patchSolutionsCatalog(catalog);
 
   const products = {
     version: 2,
@@ -247,7 +268,7 @@ async function main() {
       name: p.name,
       sku: p.sku,
       category: p.category || p.solutionGroup,
-      categoryLabel: p.categoryLabel || (p.solutionGroup === 'training-kits' ? 'Training Kit' : 'Quantum Set-Up'),
+      categoryLabel: p.categoryLabel || (p.solutionGroup ? solutionGroupLabel(p.solutionGroup) : p.categoryLabel),
       specHighlight: p.specHighlight,
       image: p.image,
       url: p.solutionUrl || `product.html?id=${encodeURIComponent(p.id)}`,

@@ -6,21 +6,31 @@
         <button class="nav-trigger" type="button">Solutions <span class="chev">▾</span></button>
         <div class="mega-panel" role="region" aria-label="Solutions menu">
           <div class="wrap mega-inner">
-            <div class="mega-grid-2">
+            <div class="mega-grid-3">
               <div>
                 <div class="mega-col-title">Quantum Set-Ups</div>
                 <a class="mega-link" href="{{BASE}}solutions/entangled-photon-source.html">Entangled Photon Source<small>Integrated laser · SPDC · 810 nm</small></a>
-                <a class="mega-link" href="{{BASE}}solutions/quantum-key-distribution.html">Quantum Key Distribution<small>QKD educational platform</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/quantum-key-distribution.html">QKD-BB84 Educational Platform<small>Quantum Key Distribution</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/quantum-eraser.html">Quantum Eraser<small>Demonstration system</small></a>
-                <a class="mega-link" href="{{BASE}}solutions/bomb-tester.html">Bomb Tester<small>Interaction-free measurement kit</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/bomb-tester.html">Elitzur-Vaidman Bomb Tester<small>Interaction-free measurement kit</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/michelson-interferometer.html">Michelson Interferometer<small>Educational interferometry</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/quantum-tomography.html">Quantum Tomography<small>State reconstruction platform</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/hbt-and-hom.html">HBT and HOM<small>Customized per requirements</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/quantum-setups.html" style="color:var(--accent);margin-top:8px;display:inline-block">View all quantum set-ups →</a>
+              </div>
+              <div>
+                <div class="mega-col-title">State of the Art Setups</div>
+                <a class="mega-link" href="{{BASE}}solutions/regenerative-delay-line.html">Regenerative Delay Line<small>Turn-key cavity delay</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/white-light-supercontinuum-source.html">White Light Supercontinuum Source<small>Customized per requirements</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/cw-and-pulsed-lasers.html">CW and Pulsed Lasers<small>Customized per requirements</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/ultrafast-photodiodes-assemblies.html">Ultrafast Photodiodes Assemblies<small>Customized per requirements</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/pockels-cell-assemblies.html">Pockels Cell Assemblies<small>Customized per requirements</small></a>
+                <a class="mega-link" href="{{BASE}}solutions/state-of-the-art-setups.html" style="color:var(--accent);margin-top:8px;display:inline-block">View all state-of-the-art setups →</a>
               </div>
               <div>
                 <div class="mega-col-title">Training Kits</div>
                 <a class="mega-link" href="{{BASE}}solutions/fourier-optics-kit.html">Fourier Optics Kit<small>Educational optics</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/polarized-3d-cinema.html">Polarized 3D Cinema<small>Demonstration kit</small></a>
-                <a class="mega-link" href="{{BASE}}solutions/regenerative-delay-line.html">Regenerative Delay Line<small>Turn-key cavity delay</small></a>
                 <a class="mega-link" href="{{BASE}}solutions/training-kits.html" style="color:var(--accent);margin-top:8px;display:inline-block">View all training kits →</a>
               </div>
             </div>
@@ -50,8 +60,8 @@
               </div>
             </div>
             <div class="mega-footer">
-              <a href="{{BASE}}components.html">View full catalog →</a>
-              <span>{{BASE}}components/search.html</span>
+              <a href="{{BASE}}components.html">Browse by category →</a>
+              <a href="{{BASE}}catalog.html">Search full catalog →</a>
             </div>
           </div>
         </div>
@@ -65,19 +75,28 @@
                 <div class="mega-col-title muted">Company</div>
                 <a class="mega-link" href="{{BASE}}company/about.html">About Us<small>Engineering · manufacturing · quality</small></a>
                 <a class="mega-link" href="{{BASE}}company/contact.html">Contact &amp; Credentials<small>GST · GeM · Pune lab</small></a>
+                <a class="mega-link" href="{{BASE}}engineering/knowledge/index.html">Knowledge Center<small>Application notes · optical guides</small></a>
               </div>
               <div class="mega-side">
                 <h4>Engineering</h4>
-                <p>Request quotes or upload schematics for quantum systems and bench components.</p>
+                <p>Request quotes for quantum systems and bench components.</p>
                 <a class="btn btn-ruby" href="{{BASE}}engineering/rfq.html">Request Technical Quote</a>
-                <a class="btn btn-outline" href="{{BASE}}engineering/upload.html" style="margin-top:10px">Upload Schematics</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <div class="nav-search">
+    <div class="nav-actions">
+      <a class="cart-trigger" href="{{BASE}}engineering/rfq.html" id="cartTrigger" aria-label="View cart">
+        <svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+          <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </a>
       <button type="button" class="search-trigger" id="searchTrigger" aria-label="Open search">
         <span class="search-icon">⌕</span>
         <span>Search…</span>

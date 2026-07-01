@@ -1,33 +1,33 @@
-# Digital Product Strategy & Positioning (v2.0)
+# Digital Product Strategy & Positioning (v3.0 — Quantum)
 
-> **Purpose:** Define sciengtech.in as a **Deep-Tech Hardware Infrastructure Engine** — RFQ-led, institutional, upmarket.  
-> **Strategic lock:** No WooCommerce. No checkout. Quote and engineering engagement only.
+> **Purpose:** Define sciengtech.in as India's **Quantum Optics Infrastructure** partner — RFQ-led, institutional, education-ready.  
+> **Strategic lock:** Quantum systems and training kits lead; bench components support assembly. No WooCommerce. No checkout.  
+> **Supersedes:** v2.0 "Deep-Tech Hardware Infrastructure Engine" — retained as Phase 2 expansion for vacuum, utilities, and broad catalog.
 
 ---
 
 ## 1. Audit & Strategic Repositioning
 
-**Sci.Eng.Tech Solutions** is deeply rooted in high-precision hardware — catering to labs, defense, space tech, and academic institutions. The current digital presentation hides this high-spec engineering under a standard, template-heavy layout.
+**Sci.Eng.Tech Solutions** engineers turnkey quantum optics systems, educational photonics kits, and precision bench hardware. The legacy WordPress site buried this strength under a generic e-commerce template ("add to cart" for training kits and optical mounts).
 
 ```
 [Current Core Issue]
-Dense navigation + generic e-commerce structure ("add to cart" for high-end optical mirrors)
-+ fragmented technical categories
-= High drop-off from B2B clients, defense labs, and elite engineering institutes.
+Generic WooCommerce shop + 16-slide product carousel + fragmented OEM/Shop dual catalog
+= Buyers cannot see SciEngTech as a quantum systems vendor — only as another optics parts list.
 ```
 
 ### Strategic Shift
 
 | From | To |
 |------|-----|
-| Standard e-commerce shop (WooCommerce) | **Premier Deep-Tech Hardware Infrastructure Engine** |
-| Selling components at prices | **Powering reliable, field-tested engineering systems** |
-| Two catalogs (OEM pages vs Shop) | **Unified technical catalog → RFQ** |
-| 180+ flat SEO URLs | **Structured IA: Solutions · Components · Utilities · Engineering Hub** |
+| Standard e-commerce shop (WooCommerce) | **Quantum Optics Infrastructure partner** |
+| Component shop as homepage story | **Integrated quantum set-ups & training kits** as hero |
+| Two catalogs (OEM pages vs Shop) | **Solutions (systems) + Components (bench catalog) → RFQ** |
+| 180+ flat SEO URLs | **Structured IA: Solutions · Components · Engineering · Company** |
 | Consumer CTAs (cart, shop) | **Request Technical Quote + schematic upload** |
-| Template WordPress brochure | **Authoritative dark UI, spec-dense, institutional proof** |
+| "Specialists in Lasers and Optics" | **Quantum optics for research, education, and advanced photonics** |
 
-**North star:** *Become the default RFQ and engineering portal for mission-critical photonics and lab hardware procurement in India.*
+**North star:** *Become India's default RFQ portal for quantum demonstration systems, educational photonics kits, and the bench hardware that supports them.*
 
 ---
 
@@ -35,20 +35,21 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 ### 2.1 Industry Landscape
 
-- India investing heavily in quantum, defense photonics, space instrumentation, semicon R&D  
-- **Buyer behavior (target):** Committee procurement, tender/GeM workflows, PI + engineer joint spec, NDA custom work — not impulse SKU purchase  
-- **Competitive set:** Thorlabs/Newport (global spec libraries), defense-qualified vendors, niche Indian OEMs  
-- **SciEngTech wedge:** Local engineering partnership + custom fabrication + institutional credentials + Indian manufacturing depth  
+- India investing heavily in **quantum technologies**, photonics education, and institute-level quantum labs  
+- **Buyer behavior (primary):** PI + lab engineer joint spec, institute procurement, curriculum kit tenders — not impulse SKU purchase  
+- **Buyer behavior (secondary):** Defense/space photonics, GeM workflows, custom OEM fabrication via schematic upload  
+- **Competitive set:** Imported quantum education kits, global photonics vendors (Thorlabs/Newport for bench parts), niche Indian OEMs  
+- **SciEngTech wedge:** **Made in India** quantum set-ups + training kits + local engineering support + integrated bench component catalog  
 
 ### 2.2 Why E-Commerce Is Retired
 
 | Factor | Implication |
 |--------|-------------|
-| Product nature | High-end mirrors, vacuum chambers, HV supplies — **quote-only by nature** |
-| Audience | Defense/space/institute procurement — **PO/tender, not card checkout** |
-| Brand damage | "Add to cart" on precision optics signals **consumer catalog**, not deep-tech vendor |
-| Operational reality | Pricing, lead time, compliance docs are **negotiated per RFQ** |
-| Legacy WooCommerce | 66 SKUs migrate to **component spec pages with RFQ CTA** — cart/checkout decommissioned |
+| Product nature | Entangled photon sources, interferometry kits, custom delay lines — **quote-only by nature** |
+| Audience | Academic institutes and R&D labs — **PO/tender, not card checkout** |
+| Brand damage | "Add to cart" on quantum demonstration systems signals **consumer catalog**, not systems vendor |
+| Operational reality | Pricing, lead time, and kit configuration are **negotiated per RFQ** |
+| Legacy WooCommerce | Catalog SKUs migrate to **component spec pages with RFQ CTA** — cart/checkout decommissioned |
 
 ---
 
@@ -56,24 +57,25 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 ### 3.1 Product Vision (3-year)
 
-> SciEngTech.in is India's authoritative digital front door for **specifying, quoting, and custom-fabricating** precision photonics and lab hardware — trusted by defense, space, academic, and industrial R&D procurement.
+> SciEngTech.in is India's authoritative digital front door for **specifying, quoting, and deploying** quantum optics systems, educational photonics kits, and bench hardware — trusted by academic institutes, quantum research labs, and institutional procurement.
 
 ### 3.2 Design Principles
 
-1. **Authority over assortment** — Fewer paths, deeper spec integrity  
-2. **Specs are the product** — Every component page is a technical document, not a product tile  
+1. **Systems before SKUs** — Quantum set-ups and training kits lead every high-intent path  
+2. **Specs are the product** — Solution and component pages are technical documents, not product tiles  
 3. **One door: RFQ** — Browse → specify → quote; no checkout fork  
-4. **Engineering is the interface** — System engineers, schematic upload, whitepapers  
-5. **Institutional trust is visible** — GST, GeM, logos, lab coordinates above the fold on Company pages  
-6. **Dark, minimal, precise** — UI matches hardware seriousness  
+4. **Education is a first-class segment** — Training kits, classroom demonstrations, and curriculum-ready copy  
+5. **Bench components support the system** — Opto-mechanics, motion, optics, and lasers enable assembly — not the homepage hero  
+6. **Institutional trust is visible** — GST, GeM, lab coordinates on Company pages  
+7. **Dark, minimal, precise** — UI matches hardware seriousness  
 
-### 3.3 Non-Goals
+### 3.3 Non-Goals (Launch)
 
 - WooCommerce, cart, checkout, "My Account" commerce flows  
-- Competing with Thorlabs on SKU count day one  
+- Competing with Thorlabs on SKU count  
+- Leading with vacuum, chillers, or utilities (Phase 2)  
 - Consumer / hobbyist positioning  
 - Price-led marketing or discount language  
-- Multi-vendor marketplace  
 
 ---
 
@@ -81,30 +83,31 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 ### 4.1 Positioning Statement
 
-**For** defense, space, academic, and industrial R&D organizations in India  
-**Who** require certified optics, optomechanics, diagnostics, and vacuum hardware with absolute tolerances  
-**SciEngTech** is a deep-tech hardware infrastructure partner  
-**That** delivers field-tested components, custom fabrication, and direct engineering verification  
+**For** academic institutes, quantum research laboratories, and photonics education programs in India  
+**Who** require turnkey quantum demonstration systems, educational kits, and bench hardware for optical assembly  
+**SciEngTech** is a quantum optics infrastructure partner  
+**That** delivers integrated entangled photon sources, QKD platforms, interferometry kits, and Made-in-India bench components with engineering verification  
 **Unlike** generic importers or template e-commerce catalogs  
-**We** remove operational uncertainty from procurement through rigorous inspection, institutional readiness, and schematic-to-spec engineering support.
+**We** remove setup uncertainty through turnkey system design, classroom-ready kits, and RFQ-led procurement with institutional credentials.
 
 ### 4.2 Category Frame
 
 | Layer | Frame |
 |-------|-------|
-| **Primary** | Deep-tech hardware infrastructure engine |
-| **Secondary** | Precision photonics & lab systems supplier (B2B / institutional) |
-| **Tertiary** | Custom OEM fabrication (optics, optomechanics, vacuum, HV) |
+| **Primary** | Quantum optics systems & educational photonics kits |
+| **Secondary** | Bench component catalog (opto-mechanics, motion, optics, lasers, hardware) |
+| **Tertiary (Phase 2)** | Vacuum & HV, detectors, metrology suites, lab utilities |
 
-**Retire:** "Optics e-cart", "shop", "online store".
+**Retire:** "Optics e-cart", "shop", "online store", "Specialists in Lasers and Optics" as primary positioning.
 
 ### 4.3 Positioning Pillars
 
 | Pillar | Message |
 |--------|---------|
-| **Absolute precision** | Micron tolerances, wavelength-specified optics, validated metrology |
-| **Field-tested reliability** | Quality inspection before dispatch; mission-critical trust |
-| **Institutional readiness** | GST, GeM, credentials, PO-friendly engagement |
+| **Quantum systems** | Entangled photon sources, QKD, quantum eraser, bomb tester, interferometry — turnkey for classroom and research |
+| **Education & training** | Fourier optics, polarized 3D cinema, regenerative delay line — hands-on photonics curricula |
+| **Bench infrastructure** | Opto-mechanics, stages, optics, lasers — supporting catalog for quantum bench assembly |
+| **Institutional readiness** | GST, GeM, credentials, PO-friendly RFQ engagement |
 | **Engineering partnership** | RFQ portal, `.STEP`/`.DXF` upload, system engineer access |
 
 ---
@@ -115,47 +118,49 @@ Dense navigation + generic e-commerce structure ("add to cart" for high-end opti
 
 | Segment | Focus | Primary job | Success signal |
 |---------|-------|-------------|----------------|
-| **Defense & space labs** | 35% | Source qualified components with traceability | RFQ + tender docs |
-| **Elite academic / research** | 25% | Spec quantum/metrology systems | RFQ + schematic upload |
-| **Industrial R&D / OEM** | 25% | Custom fabrication at volume | Upload + repeat RFQ |
-| **Institutional procurement** | 15% | Vendor validation, GST/GeM, lead time | Credentials page → RFQ |
+| **Elite academic / quantum labs** | 40% | Procure turnkey quantum demonstration systems and curriculum kits | RFQ + repeat institute orders |
+| **Photonics education programs** | 25% | Source classroom-ready training kits with manuals | RFQ + training kit bundle |
+| **Quantum / photonics R&D** | 20% | Spec entangled photon sources and custom set-ups | RFQ + schematic upload |
+| **Institutional procurement** | 10% | Vendor validation, GST/GeM, lead time | Credentials page → RFQ |
+| **Defense & industrial R&D** | 5% | Bench components and custom fabrication | Upload + RFQ |
 
 ### 5.2 Jobs-to-be-Done
 
-**Defense program engineer:** "When I specify optics for a classified bench, I need certified specs and a vendor who won't introduce supply risk — so my experiment timeline holds."
+**Quantum lab PI:** "When I stand up a quantum optics teaching lab, I need turnkey entangled photon and demonstration kits with documentation — so my students experiment instead of troubleshooting alignment."
+
+**Photonics curriculum coordinator:** "When I equip a classroom, I need modular educational kits (interferometry, Fourier optics, QKD analogy) with stable alignment — so labs run reliably every semester."
+
+**Lab engineer:** "When I build a quantum bench, I need spec-verified mounts, stages, and optics from one vendor — so I can RFQ the BOM and get engineering support."
 
 **Institute procurement officer:** "When I approve a vendor, I need GST/GeM credentials and documented quality process — so audit and tender compliance pass."
-
-**OEM integrator:** "When I need custom mounts from drawings, I upload `.STEP` files and get engineering verification — so I don't prototype on unverified parts."
 
 ### 5.3 Anti-Personas
 
 - Bargain hunters, hobbyists, one-click consumer buyers  
 - Users expecting Amazon-style checkout  
-- SEO traffic seeking unrelated consumer goods  
+- Buyers seeking only commodity hardware with no systems interest (serve via Components, don't lead homepage)  
 
 ---
 
 ## 6. Digital Product Model
 
-### 6.1 Unified Component Library (Not a Shop)
+### 6.1 Two-Tier Catalog (Systems + Bench)
 
 | Page type | UI label | Action |
 |-----------|----------|--------|
+| **Quantum set-up** | System specification | Request quote (pre-filled SKU) |
+| **Training / education kit** | Educational system spec | Request quote |
 | **Standard component** | Technical spec document | Request quote (pre-filled SKU) |
-| **Configurable component** | Spec + option matrix | Request quote with configuration |
 | **Custom / OEM** | Capability page | Upload schematics + RFQ |
-| **System / suite** | Solution integration page | Contact system engineer |
-| **Utility / support** | Secondary catalog | Request quote |
 
-**No prices on public site** (optional: "Price on application" or omit entirely). Pricing delivered in RFQ response.
+**No prices on public site.** Pricing delivered in RFQ response.
 
 ### 6.2 Conversion Funnel
 
 ```
-Awareness (SEO, referral, tender)
-    → Homepage / Solution page
-    → Component spec browse
+Awareness (SEO, referral, institute tender, academic network)
+    → Homepage / Solution page (quantum set-up or training kit)
+    → Component spec browse (bench assembly)
     → RFQ (pre-filled) OR Schematic upload
     → Engineering review → Quote → PO → Fulfillment
 ```
@@ -164,44 +169,42 @@ Awareness (SEO, referral, tender)
 
 | Surface | Function |
 |---------|----------|
-| `/engineering/rfq/` | Structured RFQ portal — BOM, application, qty, timeline |
-| `/engineering/upload/` | `.dxf`, `.step`, `.pdf` upload + contact |
-| `/engineering/knowledge/` | Laser specs, whitepapers, application notes |
-
-All high-intent paths converge here — not scattered contact forms.
+| `/engineering/rfq.html` | Structured RFQ — BOM, application, qty, timeline |
+| `/engineering/upload.html` | `.dxf`, `.step`, `.pdf` upload + contact |
+| `/engineering/knowledge/` | *(Phase 2)* Application notes, whitepapers |
 
 ---
 
 ## 7. User Journeys
 
-### Journey 1 — Institutional RFQ
+### Journey 1 — Quantum system RFQ
 
 ```
-Tender research / referral → Homepage → Institutional proof → RFQ Portal → PO
+Institute referral / search → Homepage carousel → Solution spec page → RFQ (SKU pre-filled) → PO
 ```
 
-### Journey 2 — Component specification
+### Journey 2 — Training kit procurement
+
+```
+Curriculum planning → Solutions / Training Kits hub → Kit spec page → RFQ → PO
+```
+
+### Journey 3 — Bench component specification
 
 ```
 Google spec search → Component page → Review spec table → Request quote (SKU attached)
 ```
 
-### Journey 3 — Custom fabrication
+### Journey 4 — Custom fabrication
 
 ```
 OEM project → Solutions or Components → Upload schematics → Engineering verification → Quote
 ```
 
-### Journey 4 — Deep-tech system inquiry
+### Journey 5 — Institutional validation
 
 ```
-Solutions (Quantum / Metrology / Vacuum suite) → System specs → Contact system engineer
-```
-
-### Journey 5 — Technical research
-
-```
-Knowledge Center whitepaper → Related components → RFQ
+Tender / vendor check → Contact & Credentials → RFQ
 ```
 
 **Retired journey:** Browse → Add to cart → Checkout.
@@ -210,40 +213,41 @@ Knowledge Center whitepaper → Related components → RFQ
 
 ## 8. Feature Roadmap
 
-### Phase 0 — Launch (Revamp)
+### Phase 0 — Launch (Current build)
 
-- Decommission WooCommerce cart/checkout  
-- Migrate 66 legacy SKUs → component spec pages with RFQ CTA  
-- Implement Gemini IA (Solutions, Components, Utilities, Engineering Hub, Company)  
+- Homepage: quantum hero, solutions carousel, 3 pillars (Quantum · Training · Bench)  
+- Solutions hub + **8 solution pages** (entangled photon source, bomb tester, Michelson, polarized 3D, quantum eraser, Fourier optics, QKD, regenerative delay line)  
+- Components hub + **6 categories**, **47** spec pages via `product.html`  
+- Global catalog search  
+- RFQ + upload pages (Google Form integration — client supplies URLs)  
+- Company: About, Contact & credentials  
 - Dark UI with ruby RFQ CTAs  
-- Homepage per copy framework (5 sections)  
-- RFQ portal with ticket ID + email ack  
-- Schematic upload (`.dxf`, `.step`, `.pdf`)  
-- 301 redirect map from legacy URLs  
-- Company page: GST, GeM, lab coordinates  
-- GA4: `submit_rfq`, `upload_schematic`, `click_rfq_portal`  
+- Decommission WooCommerce cart/checkout (redirect guidance)  
 
-### Phase 1 — Institutional depth (0–3 mo)
+### Phase 1 — Depth (0–3 mo)
 
+- Product photography for all solutions + priority components  
 - Institutional logo wall (permissioned)  
-- CRM integration (Zoho/HubSpot) for RFQ pipeline  
-- PDF datasheets per component (uniform template)  
-- Quote response SLA published (e.g. 1 business day ack)  
-- Knowledge Center: 6+ whitepapers / spec guides  
+- Knowledge Center (migrate legacy articles)  
+- PDF datasheets per solution and component  
+- Quote response SLA published  
+- Header RFQ Portal button (persistent ruby CTA)  
 
-### Phase 2 — Portal (3–9 mo)
+### Phase 2 — Catalog expansion (3–9 mo)
+
+- Utilities hub (detectors, chillers, cleaning, testing lab)  
+- Vacuum & HV component domain  
+- Laser metrology solution area  
+- Migrate remaining legacy OEM pages (~180 URLs)  
+- 301 redirect map at scale  
+- CRM integration for RFQ pipeline  
+
+### Phase 3 — Portal (9–18 mo)
 
 - Registered institutional accounts (RFQ history)  
 - NDA-gated document room  
 - GeM/tender document downloads  
-- Engineering ticket status tracking  
-
-### Phase 3 — Scale (9–18 mo)
-
-- PIM for spec consistency  
-- CAD preview on upload  
-- Configurator for optics (wavelength, coating) → auto RFQ  
-- Hindi institutional content (if validated)  
+- Configurator for optics → auto RFQ  
 
 ---
 
@@ -251,35 +255,36 @@ Knowledge Center whitepaper → Related components → RFQ
 
 ### 9.1 North Star
 
-**Qualified RFQs + schematic uploads per month** (deduplicated by organization)
+**Qualified RFQs for quantum systems and training kits per month** (plus bench component RFQs and schematic uploads)
 
 ### 9.2 Primary KPIs
 
 | KPI | Target direction |
 |-----|------------------|
-| RFQ submission rate | ↑ vs legacy contact form baseline |
+| Solution page → RFQ click-through | ↑ |
+| Training kit RFQ submissions | ↑ |
 | Schematic upload rate | ↑ month over month |
-| RFQ Portal nav clicks | ↑ |
-| Homepage bounce rate | ↓ (target <50% institutional traffic) |
-| Time on component spec pages | ↑ |
-| Institutional credentials page views | ↑ |
+| Homepage bounce rate (academic traffic) | ↓ |
+| Time on solution spec pages | ↑ |
+| Component spec → RFQ rate | ↑ (secondary) |
 | 404 rate post-migration | <1% |
 
 ### 9.3 Retired KPIs
 
-- Cart conversion, add-to-cart rate, checkout abandonment, AOV (e-commerce metrics)
+- Cart conversion, add-to-cart rate, checkout abandonment, AOV
 
 ### 9.4 Analytics Events
 
 | Event | Trigger |
 |-------|---------|
-| `click_rfq_portal` | Nav RFQ Portal |
+| `click_rfq_hero` | Hero Request Technical Quote |
+| `click_explore_solutions` | Explore Quantum Solutions |
 | `submit_rfq` | RFQ form success |
 | `upload_schematic` | File upload success |
+| `view_solution_spec` | Solution detail load |
 | `view_component_spec` | Component detail load |
-| `click_view_system_specs` | Pillar / category CTA |
+| `click_pillar` | Homepage pillar CTA |
 | `view_credentials` | GST/GeM block engagement |
-| `download_whitepaper` | Knowledge asset |
 
 ---
 
@@ -287,25 +292,41 @@ Knowledge Center whitepaper → Related components → RFQ
 
 | Risk | Mitigation |
 |------|------------|
-| SEO loss from URL migration | 301 map; retain high-traffic slugs where possible |
-| RFQ portal without CRM | Minimum: email + spreadsheet + ticket ID day one |
+| SEO loss from URL migration | 301 map; retain high-traffic training kit slugs |
+| Quantum-only positioning narrows legacy hardware buyers | Components catalog remains fully browsable; Phase 2 adds utilities/vacuum |
+| RFQ portal without CRM | Google Forms + email routing day one |
 | Overclaiming "100% inspected" / "certified" | Legal + ops sign-off |
 | Empty institutional logo row | Omit until permissions secured |
-| Engineers expect prices online | RFQ ack sets expectation; optional "indicative lead time" on specs |
-| WooCommerce decommission breaks links | Redirect `/shop/`, `/cart/`, `/checkout/` → `/components/` or `/engineering/rfq/` |
+| Educational kit names (e.g. "Bomb Tester") | Client review for institutional tone |
+| Missing product images | Client supplies photos; legacy import pipeline available |
 
 ---
 
-## 11. Stakeholder Alignment (Resolved)
+## 11. Stakeholder Alignment (Resolved — July 2026)
 
 | Question | Decision |
 |----------|----------|
-| Primary revenue | RFQ / institutional / OEM quotes |
-| E-commerce | **No** — decommission WooCommerce |
-| Primary audience | Defense, space, elite academic, industrial R&D |
-| Primary CTA | Request Technical Quote (Ruby) |
-| Positioning | Deep-tech hardware infrastructure engine |
-| Platform | WordPress rebuild OR static/Next.js — either supports RFQ-first; remove WooCommerce either way |
+| Display name | **SciEngTech Solutions** |
+| Approved claims | Made in India · ISO certified · Approved GeM vendor · 100% Quality Inspected |
+| Credentials on Contact | GSTIN + **UDYAM** (not mislabelled as GeM ID) |
+| Email | info@sciengtech.in |
+| Pune address | Confirmed |
+| Google Maps on Contact | No |
+| Legal pages | Terms + Privacy only (no Refunds — RFQ model) |
+| Imaginate footer credit | Remove |
+| Catalog scope (v1) | 8 solutions + 47 components — sufficient |
+| Public pricing | No — quote on request |
+| Datasheets / CAD | Not public at launch |
+| Utilities / Vacuum nav | Out of scope v1 |
+| Knowledge Center | Migrate legacy articles (Phase 1) |
+| Header RFQ button | Not required |
+| Hosting | GitHub Pages |
+| Legacy WordPress / bulk 301s | Not required for now |
+| WooCommerce | Decommission |
+| DNS cutover | After client site approval |
+| GA4 | Client supplies ID + events later |
+
+Full log: [07-client-decisions-and-open-questions.md](./07-client-decisions-and-open-questions.md)
 
 ---
 
@@ -313,15 +334,16 @@ Knowledge Center whitepaper → Related components → RFQ
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│  SciEngTech — Precision Hardware for Advanced Science and        │
-│  Engineering.                                                    │
+│  SciEngTech — Integrated Quantum Systems for Research,           │
+│  Education, and Advanced Photonics.                              │
 ├──────────────────────────────────────────────────────────────────┤
-│  WHO:     Defense · space · elite academic · industrial R&D      │
-│  WHAT:    Optics · optomechanics · diagnostics · vacuum · HV     │
-│  HOW:     RFQ portal · schematic upload · system engineers        │
-│  WHY US:  Field-tested · compliance · institutional credentials  │
-│  PROOF:   100% quality inspected · GST/GeM · lab coordinates   │
-│  NOT:     E-commerce · economical items · consumer catalog       │
+│  WHO:     Academic institutes · quantum labs · photonics edu     │
+│  WHAT:    Quantum set-ups · training kits · bench components     │
+│  HOW:     RFQ portal · schematic upload · system engineers       │
+│  WHY US:  Made in India · turnkey kits · institutional RFQ       │
+│  PROOF:   Quality inspected · GST/GeM · Pune lab coordinates    │
+│  NOT:     E-commerce · optics e-cart · consumer catalog          │
+│  PHASE 2: Vacuum · utilities · metrology · knowledge center      │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
