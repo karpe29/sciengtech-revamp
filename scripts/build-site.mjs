@@ -287,6 +287,24 @@ const SLIDE_PLACEHOLDERS = [
   'assets/slides/06-optical-breadboard.svg',
 ];
 
+/** WaveSpeed homepage hero images — 5 quantum carousel + 6 category tiles */
+const HOME_QUANTUM_IMAGES = {
+  'entangled-photon-source': 'assets/homepage/quantum/01-entangled-photon-source.png',
+  'hbt-and-hom': 'assets/homepage/quantum/02-hbt-and-hom.png',
+  'quantum-key-distribution': 'assets/homepage/quantum/03-quantum-key-distribution.png',
+  'quantum-tomography': 'assets/homepage/quantum/04-quantum-tomography.png',
+  'michelson-interferometer': 'assets/homepage/quantum/05-michelson-interferometer.png',
+};
+
+const HOME_CATEGORY_IMAGES = {
+  optics: 'assets/homepage/categories/01-optics.png',
+  'opto-mechanics': 'assets/homepage/categories/02-opto-mechanics.png',
+  'motion-and-positioning': 'assets/homepage/categories/03-motion-and-positioning.png',
+  lasers: 'assets/homepage/categories/04-lasers.png',
+  'fibre-optics': 'assets/homepage/categories/05-fibre-optics.png',
+  hardware: 'assets/homepage/categories/06-hardware.png',
+};
+
 function placeholderSlide(index) {
   return SLIDE_PLACEHOLDERS[index % SLIDE_PLACEHOLDERS.length];
 }
@@ -294,7 +312,7 @@ function placeholderSlide(index) {
 function componentCategoryQuicklinks() {
   const ordered = HOME_CATEGORY_ORDER.map((slug) => CATEGORIES.find((c) => c.slug === slug)).filter(Boolean);
   const tiles = ordered.map((cat, i) => {
-    const cover = categoryCoverImage(cat.slug) || placeholderSlide(i);
+    const cover = HOME_CATEGORY_IMAGES[cat.slug] || categoryCoverImage(cat.slug) || placeholderSlide(i);
     return `<a class="category-tile" href="components/${cat.slug}.html" aria-label="${esc(cat.label)}">
       <span class="category-tile__media">
         <img src="${esc(cover)}" alt="" loading="lazy" />
@@ -427,7 +445,7 @@ function buildHomepageMain() {
   const slides = quantum.slice(0, 5);
   const slideHtml = slides
     .map((s, i) => {
-      const img = s.image || placeholderSlide(i);
+      const img = HOME_QUANTUM_IMAGES[s.id] || s.image || placeholderSlide(i);
       const title = s.name.replace(/^['']|['']$/g, '');
       const href = s.solutionUrl || `solutions/${s.id}.html`;
       return `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-title="${esc(title)}" data-spec="${esc(s.specHighlight)}" data-href="${esc(href)}">
@@ -438,7 +456,7 @@ function buildHomepageMain() {
   const thumbs = slides
     .map(
       (s, i) =>
-        `<button type="button" class="carousel-thumb${i === 0 ? ' is-active' : ''}" data-index="${i}"><img src="${esc(s.image || placeholderSlide(i))}" alt="" /></button>`
+        `<button type="button" class="carousel-thumb${i === 0 ? ' is-active' : ''}" data-index="${i}"><img src="${esc(HOME_QUANTUM_IMAGES[s.id] || s.image || placeholderSlide(i))}" alt="" /></button>`
     )
     .join('\n');
 
