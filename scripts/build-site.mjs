@@ -289,20 +289,20 @@ const SLIDE_PLACEHOLDERS = [
 
 /** WaveSpeed homepage hero images — 5 quantum carousel + 6 category tiles */
 const HOME_QUANTUM_IMAGES = {
-  'entangled-photon-source': 'assets/homepage/quantum/01-entangled-photon-source.png',
-  'hbt-and-hom': 'assets/homepage/quantum/02-hbt-and-hom.png',
-  'quantum-key-distribution': 'assets/homepage/quantum/03-quantum-key-distribution.png',
-  'quantum-tomography': 'assets/homepage/quantum/04-quantum-tomography.png',
-  'michelson-interferometer': 'assets/homepage/quantum/05-michelson-interferometer.png',
+  'entangled-photon-source': 'assets/homepage/quantum/01-entangled-photon-source.webp',
+  'hbt-and-hom': 'assets/homepage/quantum/02-hbt-and-hom.webp',
+  'quantum-key-distribution': 'assets/homepage/quantum/03-quantum-key-distribution.webp',
+  'quantum-tomography': 'assets/homepage/quantum/04-quantum-tomography.webp',
+  'michelson-interferometer': 'assets/homepage/quantum/05-michelson-interferometer.webp',
 };
 
 const HOME_CATEGORY_IMAGES = {
-  optics: 'assets/homepage/categories/01-optics.png',
-  'opto-mechanics': 'assets/homepage/categories/02-opto-mechanics.png',
-  'motion-and-positioning': 'assets/homepage/categories/03-motion-and-positioning.png',
-  lasers: 'assets/homepage/categories/04-lasers.png',
-  'fibre-optics': 'assets/homepage/categories/05-fibre-optics.png',
-  hardware: 'assets/homepage/categories/06-hardware.png',
+  optics: 'assets/homepage/categories/01-optics.webp',
+  'opto-mechanics': 'assets/homepage/categories/02-opto-mechanics.webp',
+  'motion-and-positioning': 'assets/homepage/categories/03-motion-and-positioning.webp',
+  lasers: 'assets/homepage/categories/04-lasers.webp',
+  'fibre-optics': 'assets/homepage/categories/05-fibre-optics.webp',
+  hardware: 'assets/homepage/categories/06-hardware.webp',
 };
 
 function placeholderSlide(index) {
