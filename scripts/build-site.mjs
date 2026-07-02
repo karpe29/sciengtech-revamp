@@ -26,6 +26,16 @@ const CATEGORIES = [
   { slug: 'lab-accessories', label: 'Lab Accessories' },
 ];
 
+/** Homepage category strip — optics & opto-mechanics → lasers → others */
+const HOME_CATEGORY_ORDER = [
+  'optics',
+  'opto-mechanics',
+  'motion-and-positioning',
+  'lasers',
+  'fibre-optics',
+  'hardware',
+];
+
 const CATEGORY_COVER_PREF = {
   'opto-mechanics': [
     'breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa',
@@ -281,85 +291,30 @@ function placeholderSlide(index) {
   return SLIDE_PLACEHOLDERS[index % SLIDE_PLACEHOLDERS.length];
 }
 
-function buildHomepage() {
-  const quantum = catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups');
-  const slides = quantum.slice(0, 5);
-  const slideHtml = slides
-    .map((s, i) => {
-      const img = s.image || placeholderSlide(i);
-      const title = s.name.replace(/^['']|['']$/g, '');
-      const href = s.solutionUrl || `solutions/${s.id}.html`;
-      return `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-title="${esc(title)}" data-spec="${esc(s.specHighlight)}" data-href="${esc(href)}">
-        <a href="${esc(href)}" class="carousel-slide-link" aria-label="${esc(title)}"><img src="${esc(img)}" alt="${esc(title)}" /></a>
-      </div>`;
-    })
-    .join('\n');
-  const thumbs = slides
-    .map(
-      (s, i) =>
-        `<button type="button" class="carousel-thumb${i === 0 ? ' is-active' : ''}" data-index="${i}"><img src="${esc(s.image || placeholderSlide(i))}" alt="" /></button>`
-    )
-    .join('\n');
-  const strip = catalog.solutions
-    .map((s, i) => {
-      const title = s.name.replace(/^['']|['']$/g, '').slice(0, 28);
-      return `<a class="hardware-card" href="solutions/${s.id}.html"><img src="${esc(s.image || placeholderSlide(i))}" alt="" /><figcaption><strong>${esc(title)}</strong><span>${esc(s.sku)}</span></figcaption></a>`;
-    })
-    .join('\n');
-
-  const main = `
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="overline">Quantum Optics Infrastructure</div>
-        <h1>Integrated Quantum Systems for Research, Education, and Advanced Photonics.</h1>
-        <p>SciEngTech engineers entangled photon sources, quantum demonstration set-ups, and training kits — supported by a full bench-component catalog for optical assembly.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
-          <a class="btn btn-outline" href="solutions.html">Explore Quantum Solutions</a>
-        </div>
-      </div>
-      <div class="hero-carousel" id="heroCarousel" aria-label="Quantum solutions showcase">
-        <div class="carousel-viewport">
-          <span class="carousel-counter" id="carouselCounter">01 / ${String(slides.length).padStart(2, '0')}</span>
-          <button type="button" class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">‹</button>
-          <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
-          ${slideHtml}
-        </div>
-        <a class="carousel-meta" id="carouselMeta" href="${esc(slides[0]?.solutionUrl || `solutions/${slides[0]?.id}.html` || 'solutions.html')}">
-          <span class="slide-title" id="carouselTitle">${esc(slides[0]?.name.replace(/^['']|['']$/g, '') || '')}</span>
-          <span class="slide-spec" id="carouselSpec">${esc(slides[0]?.specHighlight || '')}</span>
-        </a>
-        <div class="carousel-thumbs" id="carouselThumbs">${thumbs}</div>
-      </div>
-    </div>
-  </section>
-  <section class="hardware-strip" aria-label="Quantum solutions">
+function componentCategoryQuicklinks() {
+  const ordered = HOME_CATEGORY_ORDER.map((slug) => CATEGORIES.find((c) => c.slug === slug)).filter(Boolean);
+  const tiles = ordered.map((cat, i) => {
+    const cover = categoryCoverImage(cat.slug) || placeholderSlide(i);
+    return `<a class="category-tile" href="components/${cat.slug}.html" aria-label="${esc(cat.label)}">
+      <span class="category-tile__media">
+        <img src="${esc(cover)}" alt="" loading="lazy" />
+        <span class="category-tile__label">${esc(cat.label)}</span>
+      </span>
+    </a>`;
+  }).join('\n');
+  return `<div class="hero-categories category-quicklinks" aria-label="Browse components by category">
     <div class="wrap">
-      <h2>Quantum set-ups &amp; training kits</h2>
-      <a class="strip-link" href="solutions.html">View all solutions →</a>
-    </div>
-    <div class="hardware-strip-wrap">
-      <button type="button" class="strip-scroll-btn prev" id="stripPrev" aria-label="Scroll left">‹</button>
-      <button type="button" class="strip-scroll-btn next" id="stripNext" aria-label="Scroll right">›</button>
-      <div class="hardware-scroll" id="hardwareScroll">${strip}</div>
-    </div>
-  </section>
-  <section class="proof" aria-label="Institutional clients">
-    <div class="wrap proof-inner">
-      <p class="proof-overline">Institutional reach</p>
-      <p class="proof-label">Powering quantum optics education and research across India's leading academic and R&amp;D laboratories.</p>
-      <div class="client-sectors">
-        <span class="client-sector">IITs</span>
-        <span class="client-sector">IISERs</span>
-        <span class="client-sector">Universities</span>
-        <span class="client-sector">Defence Labs</span>
-        <span class="client-sector">Space Labs</span>
-        <span class="client-sector">Industries</span>
+      <div class="category-quicklinks__head">
+        <h2>Browse by Category</h2>
+        <a class="category-quicklinks__all" href="components.html">All Components →</a>
       </div>
+      <div class="category-quicklinks__grid">${tiles}</div>
     </div>
-  </section>
-  <section class="pillars">
+  </div>`;
+}
+
+function homePillarsSection() {
+  return `<section class="pillars">
     <div class="wrap">
       <div class="section-head"><h2>Engineered for quantum demonstration. Specified for the lab bench.</h2></div>
       <div class="home-catalog">
@@ -394,8 +349,11 @@ function buildHomepage() {
         </a>
       </div>
     </div>
-  </section>
-  <section class="data-proof" aria-label="Quality and compliance">
+  </section>`;
+}
+
+function homeClosingSections() {
+  return `<section class="data-proof" aria-label="Quality and compliance">
     <div class="wrap quality-proof">
       <div class="quality-proof__intro">
         <p class="quality-proof__overline">Institutional procurement ready</p>
@@ -441,7 +399,7 @@ function buildHomepage() {
         </div>
         <div class="spec-table quality-record">
           <header>PROCUREMENT &amp; COMPLIANCE RECORD</header>
-          <div class="spec-row"><span>Legal entity</span><span>Sciengtech Solutions LLP</span></div>
+          <div class="spec-row"><span>Legal entity</span><span>SciEngTech Solutions LLP</span></div>
           <div class="spec-row"><span>Origin</span><span>Made in India · Pune</span></div>
           <div class="spec-row"><span>GSTIN</span><span class="mono">27AEOFS5239R1ZY</span></div>
           <div class="spec-row"><span>UDYAM</span><span class="mono">UDYAM-MH-26-0215820</span></div>
@@ -462,14 +420,81 @@ function buildHomepage() {
     </div>
   </section>
   <script src="js/home-carousel.js"></script>`;
+}
 
+function buildHomepageMain() {
+  const quantum = catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups');
+  const slides = quantum.slice(0, 5);
+  const slideHtml = slides
+    .map((s, i) => {
+      const img = s.image || placeholderSlide(i);
+      const title = s.name.replace(/^['']|['']$/g, '');
+      const href = s.solutionUrl || `solutions/${s.id}.html`;
+      return `<div class="carousel-slide${i === 0 ? ' is-active' : ''}" data-title="${esc(title)}" data-spec="${esc(s.specHighlight)}" data-href="${esc(href)}">
+        <a href="${esc(href)}" class="carousel-slide-link" aria-label="${esc(title)}"><img src="${esc(img)}" alt="${esc(title)}" /></a>
+      </div>`;
+    })
+    .join('\n');
+  const thumbs = slides
+    .map(
+      (s, i) =>
+        `<button type="button" class="carousel-thumb${i === 0 ? ' is-active' : ''}" data-index="${i}"><img src="${esc(s.image || placeholderSlide(i))}" alt="" /></button>`
+    )
+    .join('\n');
+
+  return `<section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="overline">Quantum Optics Infrastructure</div>
+        <h1>Integrated Quantum Systems for Research, Education, and Advanced Photonics.</h1>
+        <p>SciEngTech engineers entangled photon sources, quantum demonstration set-ups, and training kits — supported by a full bench-component catalog for optical assembly.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
+          <a class="btn btn-outline" href="solutions.html">Explore Quantum Solutions</a>
+        </div>
+      </div>
+      <div class="hero-carousel" id="heroCarousel" aria-label="Quantum solutions showcase">
+        <div class="carousel-viewport">
+          <span class="carousel-counter" id="carouselCounter">01 / ${String(slides.length).padStart(2, '0')}</span>
+          <button type="button" class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">‹</button>
+          <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
+          ${slideHtml}
+        </div>
+        <a class="carousel-meta" id="carouselMeta" href="${esc(slides[0]?.solutionUrl || `solutions/${slides[0]?.id}.html` || 'solutions.html')}">
+          <span class="slide-title" id="carouselTitle">${esc(slides[0]?.name.replace(/^['']|['']$/g, '') || '')}</span>
+          <span class="slide-spec" id="carouselSpec">${esc(slides[0]?.specHighlight || '')}</span>
+        </a>
+        <div class="carousel-thumbs" id="carouselThumbs">${thumbs}</div>
+      </div>
+    </div>
+    ${componentCategoryQuicklinks()}
+  </section>
+  <section class="proof" aria-label="Institutional clients">
+    <div class="wrap proof-inner">
+      <p class="proof-overline">Institutional reach</p>
+      <p class="proof-label">Powering quantum optics education and research across India's leading academic and R&amp;D laboratories.</p>
+      <div class="client-sectors">
+        <span class="client-sector">IITs</span>
+        <span class="client-sector">IISERs</span>
+        <span class="client-sector">Universities</span>
+        <span class="client-sector">Defence Labs</span>
+        <span class="client-sector">Space Labs</span>
+        <span class="client-sector">Industries</span>
+      </div>
+    </div>
+  </section>
+  ${homePillarsSection()}
+  ${homeClosingSections()}`;
+}
+
+function buildHomepage() {
   write(
     'index.html',
     shell({
       base: '',
       title: 'Quantum Optics Systems & Photonics Hardware',
       desc: 'Integrated quantum set-ups, training kits, and bench components for research and education. Request a technical quote.',
-      main,
+      main: buildHomepageMain(),
       pageId: 'home',
     })
   );
@@ -671,9 +696,9 @@ function main() {
   // Company & engineering
   buildCompanyPage('../', 'company/about.html', 'About Us', `<section class="page-content about-page"><div class="wrap about-wrap">
     <h1>About SciEngTech Solutions</h1>
-    <p class="lead">Sciengtech Solutions LLP engineers quantum optics systems, educational photonics kits, and precision bench hardware from Pune, India.</p>
+    <p class="lead">SciEngTech Solutions LLP engineers quantum optics systems, educational photonics kits, and precision bench hardware from Pune, India.</p>
     <div class="about-prose">
-      <p>Sciengtech Solutions LLP builds the instruments and bench hardware that India's research labs, universities, and training centres use to teach and demonstrate quantum optics. From entangled photon sources and QKD demonstration platforms to Fourier optics kits and opto-mechanical assemblies, our work spans turnkey quantum set-ups and the components that hold an optical table together.</p>
+      <p>SciEngTech Solutions LLP builds the instruments and bench hardware that India's research labs, universities, and training centres use to teach and demonstrate quantum optics. From entangled photon sources and QKD demonstration platforms to Fourier optics kits and opto-mechanical assemblies, our work spans turnkey quantum set-ups and the components that hold an optical table together.</p>
       <p>We engineer and manufacture in Pune. Every system is specified for real laboratory use — not catalog placeholders — and validated before dispatch. Our processes are ISO-certified, every unit is quality inspected, and we are an approved vendor on the Government e-Marketplace (GeM) for institutional procurement.</p>
       <p>Institutions across India — IITs, IISERs, universities, defence laboratories, and industry R&amp;D groups — rely on SciEngTech for equipment that must perform reliably in teaching and research environments. When you request a quote, you work directly with our engineering team on configurations, lead times, and documentation suited to your procurement workflow.</p>
     </div>
@@ -710,7 +735,7 @@ function main() {
 
   buildCompanyPage('../', 'company/legal/terms.html', 'Terms & Conditions', `<section class="page-content"><div class="wrap legal-prose">
     <h1>Terms &amp; Conditions</h1>
-    <p class="lead">These terms govern use of sciengtech.in and technical quote requests submitted to Sciengtech Solutions LLP.</p>
+    <p class="lead">These terms govern use of sciengtech.in and technical quote requests submitted to SciEngTech Solutions LLP.</p>
     <h2>1. Scope</h2>
     <p>This website is a technical catalog and request-for-quote (RFQ) portal. Product specifications are provided for engineering evaluation. All orders are subject to written quotation, acceptance, and purchase order terms.</p>
     <h2>2. No online sale</h2>
@@ -720,7 +745,7 @@ function main() {
     <h2>4. Quotes &amp; orders</h2>
     <p>RFQ submissions do not constitute an order or price guarantee until a formal quotation is issued and accepted. Quotations may specify validity periods, payment terms, and delivery conditions.</p>
     <h2>5. Intellectual property</h2>
-    <p>Site content, product imagery, documentation, and branding are owned by Sciengtech Solutions LLP unless otherwise stated. Schematics uploaded by customers remain the customer's property; you grant SciEngTech a limited licence to review files for quotation and engineering purposes.</p>
+    <p>Site content, product imagery, documentation, and branding are owned by SciEngTech Solutions LLP unless otherwise stated. Schematics uploaded by customers remain the customer's property; you grant SciEngTech a limited licence to review files for quotation and engineering purposes.</p>
     <h2>6. Limitation of liability</h2>
     <p>To the extent permitted by law, SciEngTech is not liable for indirect or consequential loss arising from use of this website or reliance on preliminary catalog data. Product liability and warranty terms are defined in the applicable sales contract.</p>
     <h2>7. Governing law</h2>
@@ -732,9 +757,9 @@ function main() {
 
   buildCompanyPage('../', 'company/legal/privacy.html', 'Privacy Policy', `<section class="page-content"><div class="wrap legal-prose">
     <h1>Privacy Policy</h1>
-    <p class="lead">How Sciengtech Solutions LLP collects and uses information submitted through sciengtech.in.</p>
+    <p class="lead">How SciEngTech Solutions LLP collects and uses information submitted through sciengtech.in.</p>
     <h2>1. Who we are</h2>
-    <p>Sciengtech Solutions LLP (SciEngTech), Pune, India. Contact: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a>.</p>
+    <p>SciEngTech Solutions LLP (SciEngTech), Pune, India. Contact: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a>.</p>
     <h2>2. Information we collect</h2>
     <p>When you request a technical quote or contact us, we may collect: name, work email, organisation, phone, project details, BOM information, and correspondence related to your inquiry.</p>
     <h2>3. How we use information</h2>
